@@ -34,7 +34,7 @@ namespace Client.Scenes.Views
 
         public MagicDialog()
         {
-            TitleLabel.Text = "Magic List";
+            TitleLabel.Text = "技能";
 
             HasFooter = false;
 

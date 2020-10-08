@@ -103,7 +103,7 @@ namespace Client.Scenes.Views
             {
                 ButtonType = ButtonType.SmallButton,
                 Size = new Size(50, SmallButtonHeight),
-                Label = { Text = "Options" },
+                Label = { Text = "选项" },
                 Parent = this,
             };
             OptionsButton.MouseClick += (o, e) =>

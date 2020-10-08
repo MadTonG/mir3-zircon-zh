@@ -66,10 +66,10 @@ namespace Client.Scenes
         {
             ConnectionAttemptChanged?.Invoke(this, EventArgs.Empty);
 
-            string message = $"Attempting to connect to the server.\nAttempt:{ConnectionAttempt}";
+            string message = $"正在尝试连接到服务器.\n尝试连接:{ConnectionAttempt}";
             if (ConnectionBox == null)
             {
-                ConnectionBox = new DXMessageBox(message, "Connecting", DXMessageBoxButtons.Cancel);
+                ConnectionBox = new DXMessageBox(message, "连接到服务器", DXMessageBoxButtons.Cancel);
                 ConnectionBox.Disposing += (o, e1) => ConnectionBox = null;
                 ConnectionBox.CancelButton.MouseClick += (o, e1) => CEnvir.Target.Close();
                 ConnectionBox.CloseButton.Visible = false;
@@ -257,8 +257,8 @@ namespace Client.Scenes
             {
                 if (ConnectionBox != null) return;
 
-                ConnectionBox = new DXMessageBox("Loading Client Information...\n" +
-                                                 "Please wait...", "Loading", DXMessageBoxButtons.Cancel);
+                ConnectionBox = new DXMessageBox("加载客户端信息...\n" +
+                                                 "请等待...", "连接", DXMessageBoxButtons.Cancel);
 
                 ConnectionBox.Disposing += (o, e1) => ConnectionBox = null;
                 ConnectionBox.CancelButton.MouseClick += (o, e1) => CEnvir.Target.Close();
@@ -595,7 +595,7 @@ namespace Client.Scenes
             public LoginDialog()
             {
                 Size = new Size(300, 250);
-                TitleLabel.Text = "Login";
+                TitleLabel.Text = "登录";
                 Visible = false;
 
                 EMailTextBox = new DXTextBox
@@ -625,14 +625,14 @@ namespace Client.Scenes
                 DXLabel label = new DXLabel
                 {
                     Parent = this,
-                    Text = "E-Mail:",
+                    Text = "账号(E-Mail):",
                 };
                 label.Location = new Point(EMailTextBox.Location.X - label.Size.Width - 5, (EMailTextBox.Size.Height - label.Size.Height) / 2 + EMailTextBox.Location.Y);
 
                 label = new DXLabel
                 {
                     Parent = this,
-                    Text = "Password:",
+                    Text = "密码:",
                 };
                 label.Location = new Point(PasswordTextBox.Location.X - label.Size.Width - 5, (PasswordTextBox.Size.Height - label.Size.Height) / 2 + PasswordTextBox.Location.Y);
 
@@ -657,7 +657,7 @@ namespace Client.Scenes
 
                 RememberCheckBox = new DXCheckBox
                 {
-                    Label = { Text = "Remember Details?" },
+                    Label = { Text = "记住账号?" },
                     Parent = this,
                     Checked = Config.RememberDetails,
                 };
@@ -669,7 +669,7 @@ namespace Client.Scenes
                     Parent = this,
                     Location = new Point(85, 120),
                     Size = new Size(180, DefaultHeight),
-                    Label = { Text = "Log in" },
+                    Label = { Text = "登录" },
                     Enabled = false,
                 };
                 LoginButton.MouseClick += (o, e) => Login();
@@ -679,14 +679,14 @@ namespace Client.Scenes
                     Parent = this,
                     Location = new Point(85, 150),
                     Size = new Size(180, DefaultHeight),
-                    Label = { Text = "Change Password" },
+                    Label = { Text = "修改密码" },
                 };
                 ChangePasswordButton.MouseClick += ChangePasswordButton_MouseClick;
 
                 ForgotPasswordLabel = new DXLabel()
                 {
                     Parent = this,
-                    Text = "Forgot Password?",
+                    Text = "忘记密码?",
                     Sound = SoundIndex.ButtonC,
                 };
                 ForgotPasswordLabel.MouseEnter += (o, e) => ForgotPasswordLabel.ForeColour = Color.White;
@@ -699,7 +699,7 @@ namespace Client.Scenes
                     Parent = this,
                     Location = new Point(85, 210),
                     Size = new Size(180, DefaultHeight),
-                    Label = { Text = "New Account" },
+                    Label = { Text = "创建账号" },
                 };
                 NewAccountButton.MouseClick += NewAccountButton_MouseClick;
                 CloseButton.MouseClick += (o, e) => CEnvir.Target.Close();
@@ -1087,14 +1087,14 @@ namespace Client.Scenes
             public NewAccountDialog()
             {
                 Size = new Size(300, 255);
-                TitleLabel.Text = "Account Creation";
+                TitleLabel.Text = "创建账号";
                 HasFooter = true;
                 Visible = false;
 
                 CancelButton = new DXButton
                 {
                     Parent = this,
-                    Label = { Text = "Cancel" },
+                    Label = { Text = "取消" },
                     Location = new Point(Size.Width / 2 + 10, Size.Height - 43),
                     Size = new Size(80, DefaultHeight),
                 };
@@ -1105,7 +1105,7 @@ namespace Client.Scenes
                 {
                     Enabled = false,
                     Parent = this,
-                    Label = { Text = "Create" },
+                    Label = { Text = "创建" },
                     Location = new Point((Size.Width) / 2 - 80 - 10, Size.Height - 43),
                     Size = new Size(80, DefaultHeight),
                 };
@@ -1192,35 +1192,35 @@ namespace Client.Scenes
                 DXLabel label = new DXLabel
                 {
                     Parent = this,
-                    Text = "E-Mail:",
+                    Text = "账号(E-Mail):",
                 };
                 label.Location = new Point(EMailTextBox.Location.X - label.Size.Width - 5, (EMailTextBox.Size.Height - label.Size.Height) / 2 + EMailTextBox.Location.Y);
 
                 label = new DXLabel
                 {
                     Parent = this,
-                    Text = "Password:",
+                    Text = "密码:",
                 };
                 label.Location = new Point(Password1TextBox.Location.X - label.Size.Width - 5, (Password1TextBox.Size.Height - label.Size.Height) / 2 + Password1TextBox.Location.Y);
 
                 label = new DXLabel
                 {
                     Parent = this,
-                    Text = "Password:",
+                    Text = "密码:",
                 };
                 label.Location = new Point(Password2TextBox.Location.X - label.Size.Width - 5, (Password2TextBox.Size.Height - label.Size.Height) / 2 + Password2TextBox.Location.Y);
 
                 label = new DXLabel
                 {
                     Parent = this,
-                    Text = "Real Name:",
+                    Text = "姓名:",
                 };
                 label.Location = new Point(RealNameTextBox.Location.X - label.Size.Width - 5, (RealNameTextBox.Size.Height - label.Size.Height) / 2 + RealNameTextBox.Location.Y);
 
                 label = new DXLabel
                 {
                     Parent = this,
-                    Text = "Birth Date:",
+                    Text = "出生日期:",
                 };
                 label.Location = new Point(BirthDateTextBox.Location.X - label.Size.Width - 5, (BirthDateTextBox.Size.Height - label.Size.Height) / 2 + BirthDateTextBox.Location.Y);
 
@@ -1228,7 +1228,7 @@ namespace Client.Scenes
                 label = new DXLabel
                 {
                     Parent = this,
-                    Text = "Referral:",
+                    Text = "安全邮箱:",
                 };
                 label.Location = new Point(ReferralTextBox.Location.X - label.Size.Width - 5, (ReferralTextBox.Size.Height - label.Size.Height) / 2 + ReferralTextBox.Location.Y);
 
@@ -1727,14 +1727,14 @@ namespace Client.Scenes
             public ChangePasswordDialog()
             {
                 Size = new Size(330, 205);
-                TitleLabel.Text = "Change Password";
+                TitleLabel.Text = "修改密码";
                 HasFooter = true;
                 Visible = false;
 
                 CancelButton = new DXButton
                 {
                     Parent = this,
-                    Label = { Text = "Cancel" },
+                    Label = { Text = "取消" },
                     Location = new Point(Size.Width / 2 + 10, Size.Height - 43),
                     Size = new Size(80, DefaultHeight),
                 };
@@ -1745,7 +1745,7 @@ namespace Client.Scenes
                 {
                     Enabled = false,
                     Parent = this,
-                    Label = { Text = "Change" },
+                    Label = { Text = "修改" },
                     Location = new Point((Size.Width) / 2 - 80 - 10, Size.Height - 43),
                     Size = new Size(80, DefaultHeight),
                 };
@@ -1807,28 +1807,28 @@ namespace Client.Scenes
                 DXLabel label = new DXLabel
                 {
                     Parent = this,
-                    Text = "E-Mail:",
+                    Text = "账号(E-Mail):",
                 };
                 label.Location = new Point(EMailTextBox.Location.X - label.Size.Width - 5, (EMailTextBox.Size.Height - label.Size.Height) / 2 + EMailTextBox.Location.Y);
 
                 label = new DXLabel
                 {
                     Parent = this,
-                    Text = "Current Password:",
+                    Text = "当前密码:",
                 };
                 label.Location = new Point(CurrentPasswordTextBox.Location.X - label.Size.Width - 5, (CurrentPasswordTextBox.Size.Height - label.Size.Height) / 2 + CurrentPasswordTextBox.Location.Y);
 
                 label = new DXLabel
                 {
                     Parent = this,
-                    Text = "New Password:",
+                    Text = "新密码:",
                 };
                 label.Location = new Point(NewPassword1TextBox.Location.X - label.Size.Width - 5, (NewPassword1TextBox.Size.Height - label.Size.Height) / 2 + NewPassword1TextBox.Location.Y);
 
                 label = new DXLabel
                 {
                     Parent = this,
-                    Text = "New Password:",
+                    Text = "新密码:",
                 };
                 label.Location = new Point(NewPassword2TextBox.Location.X - label.Size.Width - 5, (NewPassword2TextBox.Size.Height - label.Size.Height) / 2 + NewPassword2TextBox.Location.Y);
 
@@ -2160,14 +2160,14 @@ namespace Client.Scenes
             public RequestResetPasswordDialog()
             {
                 Size = new Size(330, 150);
-                TitleLabel.Text = "Request Password Reset";
+                TitleLabel.Text = "忘记密码";
                 HasFooter = true;
                 Visible = false;
 
                 CancelButton = new DXButton
                 {
                     Parent = this,
-                    Label = { Text = "Cancel" },
+                    Label = { Text = "取消" },
                     Location = new Point(Size.Width / 2 + 10, Size.Height - 43),
                     Size = new Size(80, DefaultHeight),
                 };
@@ -2178,7 +2178,7 @@ namespace Client.Scenes
                 {
                     Enabled = false,
                     Parent = this,
-                    Label = { Text = "Request" },
+                    Label = { Text = "找回密码" },
                     Location = new Point((Size.Width) / 2 - 80 - 10, Size.Height - 43),
                     Size = new Size(80, DefaultHeight),
                 };
@@ -2201,7 +2201,7 @@ namespace Client.Scenes
                 DXLabel label = new DXLabel
                 {
                     Parent = this,
-                    Text = "E-Mail:",
+                    Text = "账号(E-Mail):",
                 };
                 label.Location = new Point(EMailTextBox.Location.X - label.Size.Width - 5, (EMailTextBox.Size.Height - label.Size.Height) / 2 + EMailTextBox.Location.Y);
 
@@ -2217,7 +2217,7 @@ namespace Client.Scenes
                 HaveKeyLabel = new DXLabel
                 {
                     Parent = this,
-                    Text = "Have Reset Key?",
+                    Text = "使用重置密钥?",
                 };
                 HaveKeyLabel.MouseEnter += (o, e) => HaveKeyLabel.ForeColour = Color.White;
                 HaveKeyLabel.MouseLeave += (o, e) => HaveKeyLabel.ForeColour = Color.FromArgb(198, 166, 99);
@@ -2476,14 +2476,14 @@ namespace Client.Scenes
             public ResetPasswordDialog()
             {
                 Size = new Size(330, 180);
-                TitleLabel.Text = "Reset Password";
+                TitleLabel.Text = "重置密码";
                 HasFooter = true;
                 Visible = false;
 
                 CancelButton = new DXButton
                 {
                     Parent = this,
-                    Label = { Text = "Cancel" },
+                    Label = { Text = "取消" },
                     Location = new Point(Size.Width / 2 + 10, Size.Height - 43),
                     Size = new Size(80, DefaultHeight),
                 };
@@ -2494,7 +2494,7 @@ namespace Client.Scenes
                 {
                     Enabled = false,
                     Parent = this,
-                    Label = { Text = "Reset" },
+                    Label = { Text = "重置" },
                     Location = new Point((Size.Width) / 2 - 80 - 10, Size.Height - 43),
                     Size = new Size(80, DefaultHeight),
                 };
@@ -2543,21 +2543,21 @@ namespace Client.Scenes
                 DXLabel label = new DXLabel
                 {
                     Parent = this,
-                    Text = "Reset Key:",
+                    Text = "重置密钥:",
                 };
                 label.Location = new Point(ResetKeyTextBox.Location.X - label.Size.Width - 5, (ResetKeyTextBox.Size.Height - label.Size.Height) / 2 + ResetKeyTextBox.Location.Y);
 
                 label = new DXLabel
                 {
                     Parent = this,
-                    Text = "New Password:",
+                    Text = "新密码:",
                 };
                 label.Location = new Point(NewPassword1TextBox.Location.X - label.Size.Width - 5, (NewPassword1TextBox.Size.Height - label.Size.Height) / 2 + NewPassword1TextBox.Location.Y);
 
                 label = new DXLabel
                 {
                     Parent = this,
-                    Text = "New Password:",
+                    Text = "新密码:",
                 };
                 label.Location = new Point(NewPassword2TextBox.Location.X - label.Size.Width - 5, (NewPassword2TextBox.Size.Height - label.Size.Height) / 2 + NewPassword2TextBox.Location.Y);
 

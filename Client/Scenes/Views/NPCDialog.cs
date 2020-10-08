@@ -633,7 +633,7 @@ namespace Client.Scenes.Views
                 Location = new Point(40, Size.Height - 43),
                 Size = new Size(80, DefaultHeight),
                 Parent = this,
-                Label = { Text = "Buy" },
+                Label = { Text = "购买" },
                 Enabled = false,
             };
             BuyButton.MouseClick += (o, e) => Buy();
@@ -641,7 +641,7 @@ namespace Client.Scenes.Views
             GuildCheckBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "Use Guild Funds:" },
+                Label = { Text = "使用公会资金:" },
                 Enabled = false,
             };
             GuildCheckBox.Location = new Point( 200, BuyButton.Location.Y + (BuyButton.Size.Height - GuildCheckBox.Size.Height) /2);
@@ -1149,7 +1149,7 @@ namespace Client.Scenes.Views
 
         public NPCSellDialog()
         {
-            TitleLabel.Text = "Sell Items";
+            TitleLabel.Text = "卖出物品";
 
             Grid = new DXItemGrid
             {
@@ -1192,14 +1192,14 @@ namespace Client.Scenes.Views
                 DrawFormat = TextFormatFlags.VerticalCenter | TextFormatFlags.HorizontalCenter,
                 Parent = this,
                 Location = new Point(ClientArea.Left, ClientArea.Bottom - 45),
-                Text = "Sale Total",
+                Text = "售价",
                 Size = new Size(79, 20),
                 IsControl = false,
             };
 
             DXButton selectAll = new DXButton
             {
-                Label = { Text = "Select All" },
+                Label = { Text = "选择全部" },
                 Location = new Point(ClientArea.X, GoldLabel.Location.Y + GoldLabel.Size.Height + 5),
                 ButtonType = ButtonType.SmallButton,
                 Parent = this,
@@ -1217,7 +1217,7 @@ namespace Client.Scenes.Views
 
             SellButton = new DXButton
             {
-                Label = { Text = "Sell" },
+                Label = { Text = "卖出" },
                 Location = new Point(ClientArea.Right - 80, GoldLabel.Location.Y + GoldLabel.Size.Height + 5),
                 ButtonType = ButtonType.SmallButton,
                 Parent = this,
@@ -1338,7 +1338,7 @@ namespace Client.Scenes.Views
 
         public NPCRepairDialog()
         {
-            TitleLabel.Text = "Repair Items";
+            TitleLabel.Text = "修理物品";
             Movable = false;
 
             Grid = new DXItemGrid
@@ -1378,14 +1378,14 @@ namespace Client.Scenes.Views
                 DrawFormat = TextFormatFlags.VerticalCenter | TextFormatFlags.HorizontalCenter,
                 Parent = this,
                 Location = new Point(ClientArea.Left, ClientArea.Bottom - 65),
-                Text = "Repair Cost:",
+                Text = "修复花费:",
                 Size = new Size(79, 20),
                 IsControl = false,
             };
 
             DXButton inventory = new DXButton
             {
-                Label = { Text = "Inventory" },
+                Label = { Text = "背包" },
                 Location = new Point(ClientArea.X, GoldLabel.Location.Y + GoldLabel.Size.Height + 5),
                 ButtonType = ButtonType.SmallButton,
                 Parent = this,
@@ -1403,7 +1403,7 @@ namespace Client.Scenes.Views
 
             DXButton equipment = new DXButton
             {
-                Label = { Text = "Equipment" },
+                Label = { Text = "已装备" },
                 Location = new Point(ClientArea.X + 5 + inventory.Size.Width, GoldLabel.Location.Y + GoldLabel.Size.Height + 5),
                 ButtonType = ButtonType.SmallButton,
                 Parent = this,
@@ -1422,7 +1422,7 @@ namespace Client.Scenes.Views
 
             DXButton storage = new DXButton
             {
-                Label = { Text = "Storage" },
+                Label = { Text = "仓库" },
                 Location = new Point(ClientArea.X, GoldLabel.Location.Y + GoldLabel.Size.Height + inventory.Size.Height + 5 + 5),
                 ButtonType = ButtonType.SmallButton,
                 Parent = this,
@@ -1440,7 +1440,7 @@ namespace Client.Scenes.Views
 
             GuildStorageButton = new DXButton
             {
-                Label = { Text = "Guild Storage" },
+                Label = { Text = "公会仓库" },
                 Location = new Point(ClientArea.X + inventory.Size.Width + 5, GoldLabel.Location.Y + GoldLabel.Size.Height + inventory.Size.Height + 5 + 5),
                 ButtonType = ButtonType.SmallButton,
                 Parent = this,
@@ -1463,7 +1463,7 @@ namespace Client.Scenes.Views
             SpecialCheckBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "Special Repair" },
+                Label = { Text = "特殊修理" },
                 Checked = Config.SpecialRepair,
             };
             SpecialCheckBox.Location = new Point(ClientArea.Right - 80 - SpecialCheckBox.Size.Width - 5, GoldLabel.Location.Y + GoldLabel.Size.Height + 7);
@@ -1488,7 +1488,7 @@ namespace Client.Scenes.Views
             GuildCheckBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "Use Guild Funds" },
+                Label = { Text = "使用公会资金" },
                 Enabled = false,
             };
             GuildCheckBox.Location = new Point(ClientArea.Right - 80 - GuildCheckBox.Size.Width - 5, GoldLabel.Location.Y + GoldLabel.Size.Height + SpecialCheckBox.Size.Height + 5 + 7);
@@ -1497,7 +1497,7 @@ namespace Client.Scenes.Views
 
             RepairButton = new DXButton
             {
-                Label = { Text = "Repair" },
+                Label = { Text = "修理" },
                 Location = new Point(ClientArea.Right - 80, GoldLabel.Location.Y + GoldLabel.Size.Height + 5),
                 ButtonType = ButtonType.SmallButton,
                 Parent = this,
@@ -1866,7 +1866,7 @@ namespace Client.Scenes.Views
             FireCheckBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "Fire" },
+                Label = { Text = "火" },
                 ReadOnly = true,
             };
             FireCheckBox.MouseClick += (o, e) => RefineType = RefineType.Fire;
@@ -1874,7 +1874,7 @@ namespace Client.Scenes.Views
             IceCheckBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "Ice" },
+                Label = { Text = "冰" },
                 ReadOnly = true,
             };
             IceCheckBox.MouseClick += (o, e) => RefineType = RefineType.Ice;
@@ -2001,7 +2001,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = this,
-                Text = "Quality:",
+                Text = "品质:",
             };
             label.Location = new Point(RefineQualityBox.Location.X - label.Size.Width - 5, RefineQualityBox.Location.Y + (RefineQualityBox.Size.Height - label.Size.Height)/2);
 

@@ -190,7 +190,7 @@ namespace Client.Scenes.Views
         {
             SetClientSize(new Size(359, 480));
 
-            TitleLabel.Text = "Rankings";
+            TitleLabel.Text = "排行榜";
             
             Panel = new DXControl
             {
@@ -234,7 +234,7 @@ namespace Client.Scenes.Views
                 Parent = this,
                 LibraryFile = LibraryFile.GameInter2,
                 Index = 141,
-                Hint = "Observable Status: Not Allowing",
+                Hint = "观察模式: 不允许",
             };
             ObserverButton.MouseClick += (o, e) =>
             {
@@ -242,7 +242,7 @@ namespace Client.Scenes.Views
                 if (GameScene.Game.Observer) return;
                 if (!GameScene.Game.User.InSafeZone)
                 {
-                    GameScene.Game.ReceiveChat("You can only change spectator mode whilst in safezone.", MessageType.System);
+                    GameScene.Game.ReceiveChat("您只能在安全区中更改观察模式.", MessageType.System);
                     return;
                 }
 
@@ -253,7 +253,7 @@ namespace Client.Scenes.Views
             OnlineOnlyBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "Online Only" },
+                Label = { Text = "在线" },
             };
             OnlineOnlyBox.CheckedChanged += (o, e) =>
             {
@@ -313,7 +313,7 @@ namespace Client.Scenes.Views
             DXLabel label = new DXLabel
             {
                 Parent = this,
-                Text = "Class:",
+                Text = "职业:",
             };
             label.Location = new Point(RequiredClassBox.Location.X - label.Size.Width - 5, RequiredClassBox.Location.Y + (RequiredClassBox.Size.Height - label.Size.Height) / 2);
 
@@ -663,7 +663,7 @@ namespace Client.Scenes.Views
                 Parent = this,
                 Location = new Point(RebirthLabel.Location.X + RebirthLabel.Size.Width + 5, 1),
                 ButtonType = ButtonType.SmallButton,
-                Label = { Text = "Observe" },
+                Label = { Text = "观看" },
                 Enabled = false,
                 Size = new Size(53, SmallButtonHeight)
             };
@@ -671,7 +671,7 @@ namespace Client.Scenes.Views
             {
                 if (GameScene.Game != null && CEnvir.Now < GameScene.Game.User.CombatTime.AddSeconds(10) && !GameScene.Game.Observer)
                 {
-                    GameScene.Game.ReceiveChat("Unable to observe whilst in combat.", MessageType.System);
+                    GameScene.Game.ReceiveChat("在战斗中无法观看.", MessageType.System);
                     return;
                 }
 

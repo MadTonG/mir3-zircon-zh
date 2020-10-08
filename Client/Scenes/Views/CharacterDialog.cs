@@ -57,20 +57,20 @@ namespace Client.Scenes.Views
             {
                 Parent = TabControl,
                 Border = true,
-                TabButton = { Label = { Text = "Character" } },
+                TabButton = { Label = { Text = "角色" } },
             };
             CharacterTab.BeforeChildrenDraw += CharacterTab_BeforeChildrenDraw;
             StatsTab = new DXTab
             {
                 Parent = TabControl,
                 Border = true,
-                TabButton = { Label = { Text = "Stats" } },
+                TabButton = { Label = { Text = "状态" } },
             };
             HermitTab = new DXTab
             {
                 Parent = TabControl,
                 Border = true,
-                TabButton = { Label = { Text = "Hermit" } },
+                TabButton = { Label = { Text = "修炼" } },
             };
             DXControl namePanel = new DXControl
             {
@@ -336,7 +336,7 @@ namespace Client.Scenes.Views
             ShowHelmetBox = new DXCheckBox
             {
                 Parent = CharacterTab,
-                Hint = "Display Helmet",
+                Hint = "显示头盔",
                 ReadOnly = true,
             };
             ShowHelmetBox.Location = new Point(215 + 39 - ShowHelmetBox.Size.Width, 58 - ShowHelmetBox.Size.Height);
@@ -349,7 +349,7 @@ namespace Client.Scenes.Views
             DXLabel label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "AC:"
+                Text = "物防:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 - label.Size.Width + 25, y += 10);
 
@@ -364,7 +364,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "MR:"
+                Text = "魔防:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 * 2 - label.Size.Width + 25, y);
 
@@ -379,7 +379,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "DC:"
+                Text = "破坏:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 - label.Size.Width + 25, y += 20);
 
@@ -394,7 +394,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "MC:"
+                Text = "魔法:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 * 2 - label.Size.Width + 25, y);
 
@@ -409,7 +409,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "SC:"
+                Text = "道术:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 * 3 - label.Size.Width + 25, y);
 
@@ -425,7 +425,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "Accuracy:"
+                Text = "准确:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 - label.Size.Width + 25, y += 20);
 
@@ -441,7 +441,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "Agility:"
+                Text = "敏捷:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 * 2 - label.Size.Width + 25, y);
 
@@ -456,7 +456,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "Body W:"
+                Text = "负重:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 - label.Size.Width + 25, y += 20);
 
@@ -471,7 +471,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "Hand W:"
+                Text = "腕力:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 * 3 - label.Size.Width + 25, y);
 
@@ -488,7 +488,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "A. Speed:"
+                Text = "攻速:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 - label.Size.Width + 25, y += 20);
 
@@ -504,7 +504,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "Luck:"
+                Text = "幸运:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 * 2 - label.Size.Width + 25, y);
 
@@ -519,7 +519,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "Comfort:"
+                Text = "舒适:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 * 3 - label.Size.Width + 25, y);
 
@@ -536,7 +536,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "Life Steal:"
+                Text = "生命窃取:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 - label.Size.Width + 25, y += 20);
 
@@ -551,7 +551,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "Gold Rate:"
+                Text = "金币倍率:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 * 3 - label.Size.Width + 25, y);
 
@@ -566,7 +566,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "Critical Chance:"
+                Text = "暴击机率:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 - label.Size.Width + 25, y += 20);
 
@@ -581,7 +581,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "Drop Rate:"
+                Text = "掉落概率:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 * 3 - label.Size.Width + 25, y);
 
@@ -596,7 +596,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "Pick Up Radius:"
+                Text = "拾取范围:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4  - label.Size.Width + 25, y += 20);
 
@@ -612,7 +612,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "Exp. Rate:"
+                Text = "经验倍率:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 * 3 - label.Size.Width + 25, y);
 
@@ -1104,7 +1104,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = HermitTab,
-                Text = "AC:"
+                Text = "物防:"
             };
             label.Location = new Point(HermitTab.Size.Width / 4 - label.Size.Width + 25, 15);
 
@@ -1119,7 +1119,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = HermitTab,
-                Text = "MR:"
+                Text = "魔防:"
             };
             label.Location = new Point(HermitTab.Size.Width / 4 * 2 - label.Size.Width + 25, 15);
 
@@ -1134,7 +1134,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = HermitTab,
-                Text = "DC:"
+                Text = "破坏:"
             };
             label.Location = new Point(HermitTab.Size.Width / 4 - label.Size.Width + 25, 35);
 
@@ -1149,7 +1149,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = HermitTab,
-                Text = "MC:"
+                Text = "魔法:"
             };
             label.Location = new Point(HermitTab.Size.Width / 4 * 2 - label.Size.Width + 25, 35);
 
@@ -1164,7 +1164,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = HermitTab,
-                Text = "SC:"
+                Text = "道术:"
             };
             label.Location = new Point(HermitTab.Size.Width / 4 * 3 - label.Size.Width + 25, 35);
 
@@ -1179,7 +1179,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = HermitTab,
-                Text = "Health:"
+                Text = "生命值:"
             };
             label.Location = new Point(HermitTab.Size.Width / 4  - label.Size.Width + 25, 55);
 
@@ -1194,7 +1194,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = HermitTab,
-                Text = "Mana:"
+                Text = "魔法值:"
             };
             label.Location = new Point(HermitTab.Size.Width / 4 * 2 - label.Size.Width + 25, 55);
 
@@ -1355,7 +1355,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = HermitTab,
-                Text = "Unspent Points:"
+                Text = "未使用修炼点数:"
             };
             label.Location = new Point(HermitTab.Size.Width / 4  * 2- label.Size.Width + 25, 150);
 
@@ -1370,7 +1370,7 @@ namespace Client.Scenes.Views
             DXCheckBox check = new DXCheckBox
             {
                 Parent = HermitTab,
-                Label = { Text = "Show Confirmation" },
+                Label = { Text = "加点确认" },
                 Checked = true,
             };
             check.Location = new Point(HermitTab.Size.Width - check.Size.Width - 10, HermitTab.Size.Height - check.Size.Height - 10);
@@ -1379,7 +1379,7 @@ namespace Client.Scenes.Views
             {
                 Parent = HermitTab,
                 Location = new Point(50, 180),
-                Label = { Text = "AC" },
+                Label = { Text = "物防" },
                 ButtonType = ButtonType.SmallButton,
                 Size = new Size(80, SmallButtonHeight)
             };
@@ -1389,7 +1389,7 @@ namespace Client.Scenes.Views
 
                 if (check.Checked)
                 {
-                    DXMessageBox box = new DXMessageBox("Are you sure you want to increase your AC?", "Hermit Confirmation", DXMessageBoxButtons.YesNo);
+                    DXMessageBox box = new DXMessageBox("Are you sure you want to increase your 物防?", "修炼确认", DXMessageBoxButtons.YesNo);
 
                     box.YesButton.MouseClick += (o1, e1) =>
                     {
@@ -1406,7 +1406,7 @@ namespace Client.Scenes.Views
             {
                 Parent = HermitTab,
                 Location = new Point(150, but.Location.Y),
-                Label = { Text = "MR" },
+                Label = { Text = "魔防" },
                 ButtonType = ButtonType.SmallButton,
                 Size = new Size(80, SmallButtonHeight),
             };
@@ -1416,7 +1416,7 @@ namespace Client.Scenes.Views
 
                 if (check.Checked)
                 {
-                    DXMessageBox box = new DXMessageBox("Are you sure you want to increase your MR?", "Hermit Confirmation", DXMessageBoxButtons.YesNo);
+                    DXMessageBox box = new DXMessageBox("Are you sure you want to increase your 魔防?", "修炼确认", DXMessageBoxButtons.YesNo);
 
                     box.YesButton.MouseClick += (o1, e1) =>
                     {
@@ -1433,7 +1433,7 @@ namespace Client.Scenes.Views
             {
                 Parent = HermitTab,
                 Location = new Point(50, but.Location.Y + 25),
-                Label = { Text = "Health" },
+                Label = { Text = "生命值" },
                 ButtonType = ButtonType.SmallButton,
                 Size = new Size(80, SmallButtonHeight)
             };
@@ -1443,7 +1443,7 @@ namespace Client.Scenes.Views
 
                 if (check.Checked)
                 {
-                    DXMessageBox box = new DXMessageBox("Are you sure you want to increase your Health?", "Hermit Confirmation", DXMessageBoxButtons.YesNo);
+                    DXMessageBox box = new DXMessageBox("Are you sure you want to increase your 生命值?", "修炼确认", DXMessageBoxButtons.YesNo);
 
                     box.YesButton.MouseClick += (o1, e1) =>
                     {
@@ -1460,7 +1460,7 @@ namespace Client.Scenes.Views
             {
                 Parent = HermitTab,
                 Location = new Point(150, but.Location.Y ),
-                Label = { Text = "Mana" },
+                Label = { Text = "魔法值" },
                 ButtonType = ButtonType.SmallButton,
                 Size = new Size(80, SmallButtonHeight)
             };
@@ -1470,7 +1470,7 @@ namespace Client.Scenes.Views
 
                 if (check.Checked)
                 {
-                    DXMessageBox box = new DXMessageBox("Are you sure you want to increase your Mana?", "Hermit Confirmation", DXMessageBoxButtons.YesNo);
+                    DXMessageBox box = new DXMessageBox("Are you sure you want to increase your 魔法值?", "Hermit Confirmation", DXMessageBoxButtons.YesNo);
 
                     box.YesButton.MouseClick += (o1, e1) =>
                     {
@@ -1488,7 +1488,7 @@ namespace Client.Scenes.Views
             {
                 Parent = HermitTab,
                 Location = new Point(50, but.Location.Y + 25),
-                Label = { Text = "DC" },
+                Label = { Text = "破坏" },
                 ButtonType = ButtonType.SmallButton,
                 Size = new Size(80, SmallButtonHeight)
             };
@@ -1498,7 +1498,7 @@ namespace Client.Scenes.Views
 
                 if (check.Checked)
                 {
-                    DXMessageBox box = new DXMessageBox("Are you sure you want to increase your DC?", "Hermit Confirmation", DXMessageBoxButtons.YesNo);
+                    DXMessageBox box = new DXMessageBox("Are you sure you want to increase your 破坏?", "Hermit Confirmation", DXMessageBoxButtons.YesNo);
 
                     box.YesButton.MouseClick += (o1, e1) =>
                     {
@@ -1515,7 +1515,7 @@ namespace Client.Scenes.Views
             {
                 Parent = HermitTab,
                 Location = new Point(50, but.Location.Y + 25),
-                Label = { Text = "MC" },
+                Label = { Text = "魔法" },
                 ButtonType = ButtonType.SmallButton,
                 Size = new Size(80, SmallButtonHeight)
             };
@@ -1525,7 +1525,7 @@ namespace Client.Scenes.Views
 
                 if (check.Checked)
                 {
-                    DXMessageBox box = new DXMessageBox("Are you sure you want to increase your MC?", "Hermit Confirmation", DXMessageBoxButtons.YesNo);
+                    DXMessageBox box = new DXMessageBox("Are you sure you want to increase your 魔法?", "Hermit Confirmation", DXMessageBoxButtons.YesNo);
 
                     box.YesButton.MouseClick += (o1, e1) =>
                     {
@@ -1542,7 +1542,7 @@ namespace Client.Scenes.Views
             {
                 Parent = HermitTab,
                 Location = new Point(150, but.Location.Y ),
-                Label = { Text = "SC" },
+                Label = { Text = "道术" },
                 ButtonType = ButtonType.SmallButton,
                 Size = new Size(80, SmallButtonHeight)
             };
@@ -1552,7 +1552,7 @@ namespace Client.Scenes.Views
 
                 if (check.Checked)
                 {
-                    DXMessageBox box = new DXMessageBox("Are you sure you want to increase your SC?", "Hermit Confirmation", DXMessageBoxButtons.YesNo);
+                    DXMessageBox box = new DXMessageBox("Are you sure you want to increase your 道术?", "Hermit Confirmation", DXMessageBoxButtons.YesNo);
 
                     box.YesButton.MouseClick += (o1, e1) =>
                     {
@@ -1570,7 +1570,7 @@ namespace Client.Scenes.Views
             {
                 Parent = HermitTab,
                 Location = new Point(100, but.Location.Y + 25),
-                Label = { Text = "Element" },
+                Label = { Text = "元素" },
                 ButtonType = ButtonType.SmallButton,
                 Size = new Size(80, SmallButtonHeight)
             };
@@ -1580,7 +1580,7 @@ namespace Client.Scenes.Views
 
                 if (check.Checked)
                 {
-                    DXMessageBox box = new DXMessageBox("Are you sure you want to increase your Element Attack?", "Hermit Confirmation", DXMessageBoxButtons.YesNo);
+                    DXMessageBox box = new DXMessageBox("Are you sure you want to increase your 元素攻击?", "Hermit Confirmation", DXMessageBoxButtons.YesNo);
 
                     box.YesButton.MouseClick += (o1, e1) =>
                     {

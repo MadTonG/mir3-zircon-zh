@@ -43,7 +43,7 @@ namespace Client.Models
             Name = Item.Count > 1 ? $"{itemInfo.ItemName} ({Item.Count})" : itemInfo.ItemName;
 
             if ((Item.Flags & UserItemFlags.QuestItem) == UserItemFlags.QuestItem)
-                Title = "(Quest)";
+                Title = "(任务)";
 
 
 

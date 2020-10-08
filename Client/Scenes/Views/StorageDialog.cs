@@ -45,7 +45,7 @@ namespace Client.Scenes.Views
 
         public StorageDialog()
         {
-            TitleLabel.Text = "Storage";
+            TitleLabel.Text = "仓库";
 
             SetClientSize(new Size(483, 411));
 
@@ -84,7 +84,7 @@ namespace Client.Scenes.Views
             {
                 Parent = filterPanel,
                 Location = new Point(ItemNameTextBox.Location.X + ItemNameTextBox.Size.Width + 10, 5),
-                Text = "Item:",
+                Text = "物品:",
             };
 
 
@@ -101,7 +101,7 @@ namespace Client.Scenes.Views
             new DXListBoxItem
             {
                 Parent = ItemTypeComboBox.ListBox,
-                Label = { Text = $"All" },
+                Label = { Text = $"全部" },
                 Item = null
             };
 
@@ -142,7 +142,7 @@ namespace Client.Scenes.Views
             {
                 Parent = TabControl,
                 Border = true,
-                TabButton = { Label = { Text = "Storage" } },
+                TabButton = { Label = { Text = "仓库" } },
                 Visible = true,
             };
 

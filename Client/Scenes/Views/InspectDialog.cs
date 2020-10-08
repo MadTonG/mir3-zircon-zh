@@ -67,20 +67,20 @@ namespace Client.Scenes.Views
             {
                 Parent = TabControl,
                 Border = true,
-                TabButton = { Label = { Text = "Character" } },
+                TabButton = { Label = { Text = "角色" } },
             };
             CharacterTab.BeforeChildrenDraw += CharacterTab_BeforeChildrenDraw;
             StatsTab = new DXTab
             {
                 Parent = TabControl,
                 Border = true,
-                TabButton = { Label = { Text = "Stats" } },
+                TabButton = { Label = { Text = "状态" } },
             };
             HermitTab = new DXTab
             {
                 Parent = TabControl,
                 Border = true,
-                TabButton = { Label = { Text = "Hermit" } },
+                TabButton = { Label = { Text = "修炼" } },
             };
             DXControl namePanel = new DXControl
             {
@@ -363,7 +363,7 @@ namespace Client.Scenes.Views
             DXLabel label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "AC:"
+                Text = "物防:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 - label.Size.Width + 25, y += 10);
 
@@ -378,7 +378,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "MR:"
+                Text = "魔防:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 * 2 - label.Size.Width + 25, y);
 
@@ -393,7 +393,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "DC:"
+                Text = "破坏:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 - label.Size.Width + 25, y += 20);
 
@@ -408,7 +408,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "MC:"
+                Text = "魔法:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 * 2 - label.Size.Width + 25, y);
 
@@ -423,7 +423,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "SC:"
+                Text = "道术:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 * 3 - label.Size.Width + 25, y);
 
@@ -439,7 +439,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "Accuracy:"
+                Text = "准确:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 - label.Size.Width + 25, y += 20);
 
@@ -455,7 +455,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "Agility:"
+                Text = "敏捷:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 * 2 - label.Size.Width + 25, y);
 
@@ -470,7 +470,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "Body W:"
+                Text = "负重:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 - label.Size.Width + 25, y += 20);
 
@@ -485,7 +485,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "Hand W:"
+                Text = "腕力:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 * 3 - label.Size.Width + 25, y);
 
@@ -502,7 +502,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "A. Speed:"
+                Text = "攻速:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 - label.Size.Width + 25, y += 20);
 
@@ -518,7 +518,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "Luck:"
+                Text = "幸运:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 * 2 - label.Size.Width + 25, y);
 
@@ -533,7 +533,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "Comfort:"
+                Text = "舒适:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 * 3 - label.Size.Width + 25, y);
 
@@ -550,7 +550,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "Life Steal:"
+                Text = "生命窃取:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 - label.Size.Width + 25, y += 20);
 
@@ -565,7 +565,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "Gold Rate:"
+                Text = "金币倍率:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 * 3 - label.Size.Width + 25, y);
 
@@ -580,7 +580,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "Critical Chance:"
+                Text = "暴击机率:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 - label.Size.Width + 25, y += 20);
 
@@ -595,7 +595,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "Drop Rate:"
+                Text = "掉落概率:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 * 3 - label.Size.Width + 25, y);
 
@@ -610,7 +610,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "Pick Up Radius:"
+                Text = "拾取范围:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 - label.Size.Width + 25, y += 20);
 
@@ -626,7 +626,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "Exp. Rate:"
+                Text = "经验倍率:"
             };
             label.Location = new Point(StatsTab.Size.Width / 4 * 3 - label.Size.Width + 25, y);
 
@@ -1116,7 +1116,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = HermitTab,
-                Text = "AC:"
+                Text = "物防:"
             };
             label.Location = new Point(HermitTab.Size.Width / 4 - label.Size.Width + 25, 15);
 
@@ -1131,7 +1131,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = HermitTab,
-                Text = "MR:"
+                Text = "魔防:"
             };
             label.Location = new Point(HermitTab.Size.Width / 4 * 2 - label.Size.Width + 25, 15);
 
@@ -1146,7 +1146,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = HermitTab,
-                Text = "DC:"
+                Text = "破坏:"
             };
             label.Location = new Point(HermitTab.Size.Width / 4 - label.Size.Width + 25, 35);
 
@@ -1161,7 +1161,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = HermitTab,
-                Text = "MC:"
+                Text = "魔法:"
             };
             label.Location = new Point(HermitTab.Size.Width / 4 * 2 - label.Size.Width + 25, 35);
 
@@ -1176,7 +1176,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = HermitTab,
-                Text = "SC:"
+                Text = "道术:"
             };
             label.Location = new Point(HermitTab.Size.Width / 4 * 3 - label.Size.Width + 25, 35);
 
@@ -1191,7 +1191,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = HermitTab,
-                Text = "Health:"
+                Text = "生命值:"
             };
             label.Location = new Point(HermitTab.Size.Width / 4 - label.Size.Width + 25, 55);
 
@@ -1206,7 +1206,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = HermitTab,
-                Text = "Mana:"
+                Text = "魔法值:"
             };
             label.Location = new Point(HermitTab.Size.Width / 4 * 2 - label.Size.Width + 25, 55);
 
@@ -1366,7 +1366,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = HermitTab,
-                Text = "Unspent Points:"
+                Text = "未使用修炼点数:"
             };
             label.Location = new Point(HermitTab.Size.Width / 4 * 2 - label.Size.Width + 25, 150);
 

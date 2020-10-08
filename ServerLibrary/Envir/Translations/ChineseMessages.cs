@@ -5,44 +5,44 @@ namespace Server.Envir.Translations
     [ConfigPath(@".\Translations\ChineseMessages.ini")]
     public class ChineseMessages : StringMessages
     {
-        public override string BannedWrongPassword { get; set; } = "Too many wrong password login attempts.";
+        public override string BannedWrongPassword { get; set; } = "密码多次输入错误.";
 
 
-        public override string PaymentComplete { get; set; } = "Your payment for {0} Game Gold was successful.";
-        public override string PaymentFailed { get; set; } = "You have been deduceted {0} Game Gold.";
-        public override string ReferralPaymentComplete { get; set; } = "One of your referral's has purchased some game gold, You got a bonus of {0} Hunt Gold.";
-        public override string ReferralPaymentFailed { get; set; } = "One of your referal's purchase has failed, You lost your bonus of {0} Hunt Gold.";
+        public override string PaymentComplete { get; set; } = "您购买 {0} 龙币付款已成功.";
+        public override string PaymentFailed { get; set; } = "您已被扣除 {0} 龙币.";
+        public override string ReferralPaymentComplete { get; set; } = "您推荐的玩家之一购买了龙币, 您获得 {0} 猎币奖励.";
+        public override string ReferralPaymentFailed { get; set; } = "您推荐的玩家之一购买龙币失败, 您失去了 {0} 猎币奖励.";
         public override string GameGoldLost { get; set; } = "Your {0} Game Gold was removed.";
         public override string GameGoldRefund { get; set; } = "Your {0} Game Gold was refunded.";
         public override string HuntGoldRefund { get; set; } = "Your {0} Hunt Gold was refunded.";
 
 
-        public override string Welcome { get; set; } = "Welcome to Zircon Server.";
-        public override string WelcomeObserver { get; set; } = "You are now Observing {0}, to stop, please logout.";
+        public override string Welcome { get; set; } = "欢迎来到【Mir3-Zircon服务器】，祝您游戏愉快。";
+        public override string WelcomeObserver { get; set; } = "您正在观看 {0}, 退出游戏停止观看模式";
         public override string ObserverChangeFail { get; set; } = "You cannot change observable mode unless you are in SafeZone";
-        public override string OnlineCount { get; set; } = "Users Online: {0}, Observers Online: {1}";
-        public override string ObserverCount { get; set; } = "You currently have {0} observers.";
-        public override string CannotFindPlayer { get; set; } = "Unable to find the player: {0}";
+        public override string OnlineCount { get; set; } = "当前在线用户: {0}, 当前观看用户: {1}";
+        public override string ObserverCount { get; set; } = "当前有 {0} 用户正在观看您.";
+        public override string CannotFindPlayer { get; set; } = "无法找到玩家: {0}";
         public override string AlreadyBlocked { get; set; } = "{0} is already on your block list.";
-        public override string BlockingWhisper { get; set; } = "You are blocking Whispers.";
-        public override string PlayerBlockingWhisper { get; set; } = "Player: {0} is blocking Whispers.";
+        public override string BlockingWhisper { get; set; } = "你已禁用私聊.";
+        public override string PlayerBlockingWhisper { get; set; } = "玩家: {0} 禁止私聊.";
         public override string GlobalDelay { get; set; } = "You cannot global for another {0} seconds.";
         public override string GlobalLevel { get; set; } = "You need to be level 33 before you can global shout.";
         public override string ShoutDelay { get; set; } = "You cannot shout for another {0} seconds.";
         public override string ShoutLevel { get; set; } = "You need to be level 2 before you can shout.";
         public override string DiceRoll { get; set; } = "[ROLL] - {0} has rolled {1} on a {2} sided dice.";
-        public override string TradingEnabled { get; set; } = "Trading Enabled.";
-        public override string TradingDisabled { get; set; } = "Trading Disabled.";
-        public override string WhisperEnabled { get; set; } = "Whisper Enabled.";
-        public override string WhisperDisabled { get; set; } = "Whisper Disabled.";
-        public override string GuildInviteEnabled { get; set; } = "Guild Invites Enabled.";
-        public override string GuildInviteDisabled { get; set; } = "Guild Invites Disabled.";
-        public override string ObserverNotLoggedIn { get; set; } = "You need to be logged in before you can chat";
-        public override string Poisoned { get; set; } = "You have been poisoned.";
-        public override string MurderedBy { get; set; } = "You have been murdered by {0}.";
-        public override string Curse { get; set; } = "You have murdered {0}, Bad luck follows you around...";
-        public override string Murdered { get; set; } = "You have murdered {0}.";
-        public override string Protected { get; set; } = "You have been protected by the law of self defence.";
+        public override string TradingEnabled { get; set; } = "允许交易.";
+        public override string TradingDisabled { get; set; } = "禁止交易.";
+        public override string WhisperEnabled { get; set; } = "允许私聊.";
+        public override string WhisperDisabled { get; set; } = "禁止私聊.";
+        public override string GuildInviteEnabled { get; set; } = "允许公会邀请.";
+        public override string GuildInviteDisabled { get; set; } = "禁止公会要求.";
+        public override string ObserverNotLoggedIn { get; set; } = "您需要先登录才能聊天";
+        public override string Poisoned { get; set; } = "你中毒了.";
+        public override string MurderedBy { get; set; } = "你被玩家 {0} 杀死了.";
+        public override string Curse { get; set; } = "你被玩家 {0} 杀死了, 倒霉的事接二连三...";
+        public override string Murdered { get; set; } = "你被玩家 {0} 杀死了.";
+        public override string Protected { get; set; } = "你受到自卫保护.";
         public override string Killed { get; set; } = "You have been killed by {0} in self defence.";
         public override string Died { get; set; } = "You have died in combat.";
         public override string GroupRecallEnabled { get; set; } = "Group Recall Enabled.";

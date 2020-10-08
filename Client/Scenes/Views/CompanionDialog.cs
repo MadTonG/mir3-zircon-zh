@@ -35,7 +35,7 @@ namespace Client.Scenes.Views
 
         public CompanionDialog()
         {
-            TitleLabel.Text = "Companion";
+            TitleLabel.Text = "伙伴";
             SetClientSize(new Size(352, 341));
 
             CompanionDisplayPoint = new Point(ClientArea.X + 60, ClientArea.Y + 50);
@@ -97,7 +97,7 @@ namespace Client.Scenes.Views
             DXCheckBox PickUpCheckBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "Pick up items:" },
+                Label = { Text = "拾取物品:" },
                 Visible = false
             };
             PickUpCheckBox.Location = new Point(ClientArea.Right - PickUpCheckBox.Size.Width +3, ClientArea.Y + 45);
@@ -127,7 +127,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.FromArgb(198, 166, 99),
                 OutlineColour = Color.Black,
                 IsControl = false,
-                Text = "Level 3",
+                Text = "等级 3",
             };
             label.Location = new Point(235 - label.Size.Width, CompanionDisplayPoint.Y );
 
@@ -139,7 +139,7 @@ namespace Client.Scenes.Views
                 OutlineColour = Color.Black,
                 IsControl = false,
                 Location = new Point(235, CompanionDisplayPoint.Y + 3),
-                Text = "Not Available"
+                Text = "不可用"
             };
 
             label = new DXLabel
@@ -150,7 +150,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.FromArgb(198, 166, 99),
                 OutlineColour = Color.Black,
                 IsControl = false,
-                Text = "Level 5",
+                Text = "等级 5",
             };
             label.Location = new Point(235 - label.Size.Width, CompanionDisplayPoint.Y + 20);
 
@@ -162,7 +162,7 @@ namespace Client.Scenes.Views
                 OutlineColour = Color.Black,
                 IsControl = false,
                 Location = new Point(235, CompanionDisplayPoint.Y + 23),
-                Text = "Not Available"
+                Text = "不可用"
             };
 
             label = new DXLabel
@@ -173,7 +173,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.FromArgb(198, 166, 99),
                 OutlineColour = Color.Black,
                 IsControl = false,
-                Text = "Level 7",
+                Text = "等级 7",
             };
             label.Location = new Point(235 - label.Size.Width, CompanionDisplayPoint.Y + 40);
 
@@ -185,7 +185,7 @@ namespace Client.Scenes.Views
                 OutlineColour = Color.Black,
                 IsControl = false,
                 Location = new Point(235, CompanionDisplayPoint.Y + 43),
-                Text = "Not Available"
+                Text = "不可用"
             };
 
 
@@ -197,7 +197,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.FromArgb(198, 166, 99),
                 OutlineColour = Color.Black,
                 IsControl = false,
-                Text = "Level 10",
+                Text = "等级 10",
             };
             label.Location = new Point(235 - label.Size.Width, CompanionDisplayPoint.Y + 60);
 
@@ -209,7 +209,7 @@ namespace Client.Scenes.Views
                 OutlineColour = Color.Black,
                 IsControl = false,
                 Location = new Point(235, CompanionDisplayPoint.Y + 63),
-                Text = "Not Available"
+                Text = "不可用"
             };
 
 
@@ -221,7 +221,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.FromArgb(198, 166, 99),
                 OutlineColour = Color.Black,
                 IsControl = false,
-                Text = "Level 11",
+                Text = "等级 11",
             };
             label.Location = new Point(235 - label.Size.Width, CompanionDisplayPoint.Y + 80);
 
@@ -233,7 +233,7 @@ namespace Client.Scenes.Views
                 OutlineColour = Color.Black,
                 IsControl = false,
                 Location = new Point(235, CompanionDisplayPoint.Y + 83),
-                Text = "Not Available"
+                Text = "不可用"
             };
 
             label = new DXLabel
@@ -244,7 +244,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.FromArgb(198, 166, 99),
                 OutlineColour = Color.Black,
                 IsControl = false,
-                Text = "Level 13",
+                Text = "等级 13",
             };
             label.Location = new Point(235 - label.Size.Width, CompanionDisplayPoint.Y + 100);
 
@@ -256,7 +256,7 @@ namespace Client.Scenes.Views
                 OutlineColour = Color.Black,
                 IsControl = false,
                 Location = new Point(235, CompanionDisplayPoint.Y + 103),
-                Text = "Not Available"
+                Text = "不可用"
             };
 
             label = new DXLabel
@@ -267,7 +267,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.FromArgb(198, 166, 99),
                 OutlineColour = Color.Black,
                 IsControl = false,
-                Text = "Level 15",
+                Text = "等级 15",
             };
             label.Location = new Point(235 - label.Size.Width, CompanionDisplayPoint.Y + 120);
 
@@ -279,7 +279,7 @@ namespace Client.Scenes.Views
                 OutlineColour = Color.Black,
                 IsControl = false,
                 Location = new Point(235, CompanionDisplayPoint.Y + 123),
-                Text = "Not Available"
+                Text = "不可用"
             };
 
             NameLabel = new DXLabel
@@ -300,7 +300,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.FromArgb(198, 166, 99),
                 OutlineColour = Color.Black,
                 IsControl = false,
-                Text = "Name",
+                Text = "昵称",
             };
             label.Location = new Point(CompanionDisplayPoint.X + 30 - label.Size.Width, CompanionDisplayPoint.Y + 40);
 
@@ -322,7 +322,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.FromArgb(198, 166, 99),
                 OutlineColour = Color.Black,
                 IsControl = false,
-                Text = "Level",
+                Text = "等级",
             };
             label.Location = new Point(CompanionDisplayPoint.X + 30 - label.Size.Width, CompanionDisplayPoint.Y + 60);
 
@@ -344,7 +344,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.FromArgb(198, 166, 99),
                 OutlineColour = Color.Black,
                 IsControl = false,
-                Text = "Experience",
+                Text = "经验值",
             };
             label.Location = new Point(CompanionDisplayPoint.X + 30 - label.Size.Width, CompanionDisplayPoint.Y + 80);
 
@@ -366,7 +366,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.FromArgb(198, 166, 99),
                 OutlineColour = Color.Black,
                 IsControl = false,
-                Text = "Hunger",
+                Text = "饥饿值",
             };
             label.Location = new Point(CompanionDisplayPoint.X + 30 - label.Size.Width, CompanionDisplayPoint.Y + 100);
 
@@ -388,7 +388,7 @@ namespace Client.Scenes.Views
                 ForeColour = Color.FromArgb(198, 166, 99),
                 OutlineColour = Color.Black,
                 IsControl = false,
-                Text = "Weight",
+                Text = "负重值",
             };
             label.Location = new Point(CompanionDisplayPoint.X + 30 - label.Size.Width, CompanionDisplayPoint.Y + 120);
         }

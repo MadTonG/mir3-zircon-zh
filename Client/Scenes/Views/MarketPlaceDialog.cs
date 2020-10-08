@@ -256,7 +256,7 @@ namespace Client.Scenes.Views
         public MarketPlaceDialog()
         {
             //HasFooter = true;
-            TitleLabel.Text = "Market Place";
+            TitleLabel.Text = "龙币商店";
             SetClientSize(new Size(740, 461));
 
 
@@ -274,7 +274,7 @@ namespace Client.Scenes.Views
             SearchTab = new DXTab
             {
                 Parent = TabControl,
-                TabButton = { Label = { Text = "Search" } },
+                TabButton = { Label = { Text = "搜索" } },
                 Border = true,
             };
 
@@ -292,7 +292,7 @@ namespace Client.Scenes.Views
             {
                 Parent = filterPanel,
                 Location = new Point(5, 5),
-                Text = "Name:",
+                Text = "名称:",
             };
 
             ItemNameBox = new DXTextBox
@@ -309,7 +309,7 @@ namespace Client.Scenes.Views
             {
                 Parent = filterPanel,
                 Location = new Point(ItemNameBox.Location.X + ItemNameBox.Size.Width + 10, 5),
-                Text = "Item:",
+                Text = "物品:",
             };
 
 
@@ -326,7 +326,7 @@ namespace Client.Scenes.Views
             new DXListBoxItem
             {
                 Parent = ItemTypeBox.ListBox,
-                Label = { Text = $"All" },
+                Label = { Text = $"全部" },
                 Item = null
             };
 
@@ -353,7 +353,7 @@ namespace Client.Scenes.Views
             {
                 Parent = filterPanel,
                 Location = new Point(ItemTypeBox.Location.X + ItemTypeBox.Size.Width + 10, 5),
-                Text = "Sort:",
+                Text = "排列:",
             };
 
             SortBox = new DXComboBox
@@ -387,7 +387,7 @@ namespace Client.Scenes.Views
                 Location = new Point(SortBox.Location.X + SortBox.Size.Width + 25, label.Location.Y - 1),
                 Parent = filterPanel,
                 ButtonType = ButtonType.SmallButton,
-                Label = { Text = "Search" }
+                Label = { Text = "搜索" }
             };
             SearchButton.MouseClick += (o, e) => Search();
 
@@ -397,7 +397,7 @@ namespace Client.Scenes.Views
                 Location = new Point(SearchButton.Location.X + SearchButton.Size.Width + 40, label.Location.Y - 1),
                 Parent = filterPanel,
                 ButtonType = ButtonType.SmallButton,
-                Label = { Text = "Clear" }
+                Label = { Text = "清除" }
             };
             ClearButton.MouseClick += (o, e) =>
             {
@@ -444,7 +444,7 @@ namespace Client.Scenes.Views
 
             new DXLabel
             {
-                Text = "Sale History",
+                Text = "售卖统计",
                 ForeColour = Color.White,
                 AutoSize = false,
                 DrawFormat = TextFormatFlags.HorizontalCenter,
@@ -455,7 +455,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = HistoryPanel,
-                Text = "Number Sold:",
+                Text = "售卖数量:",
             };
             label.Location = new Point(80 - label.Size.Width, 25);
 
@@ -471,7 +471,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = HistoryPanel,
-                Text = "Last Price:",
+                Text = "最新售价:",
             };
             label.Location = new Point(80 - label.Size.Width, 45);
 
@@ -487,7 +487,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = HistoryPanel,
-                Text = "Avg. Price:",
+                Text = "平均售价:",
             };
             label.Location = new Point(80 - label.Size.Width, 65);
 
@@ -514,7 +514,7 @@ namespace Client.Scenes.Views
             new DXLabel
             {
                 Parent = MessagePanel,
-                Text = "Message",
+                Text = "消息",
                 ForeColour = Color.White,
                 AutoSize = false,
                 DrawFormat = TextFormatFlags.HorizontalCenter,
@@ -543,7 +543,7 @@ namespace Client.Scenes.Views
             new DXLabel
             {
                 Parent = BuyPanel,
-                Text = "Buying",
+                Text = "购买",
                 ForeColour = Color.White,
                 AutoSize = false,
                 DrawFormat = TextFormatFlags.HorizontalCenter,
@@ -554,7 +554,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = BuyPanel,
-                Text = "Count:",
+                Text = "数量:",
                 ForeColour = Color.White,
             };
             label.Location = new Point(50 - label.Size.Width, 20);
@@ -575,7 +575,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = BuyPanel,
-                Text = "Price:",
+                Text = "单价:",
                 ForeColour = Color.White,
             };
             label.Location = new Point(50 - label.Size.Width, 40);
@@ -606,7 +606,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = BuyPanel,
-                Text = "Total:",
+                Text = "总价:",
                 ForeColour = Color.White,
             };
             label.Location = new Point(50 - label.Size.Width, 60);
@@ -625,7 +625,7 @@ namespace Client.Scenes.Views
             BuyGuildBox = new DXCheckBox
             {
                 Parent = BuyPanel,
-                Label = { Text = "Use Guild Funds:" },
+                Label = { Text = "使用公会资金:" },
                 Enabled = false,
             };
             BuyGuildBox.Location = new Point(158 - BuyGuildBox.Size.Width, 101);
@@ -634,7 +634,7 @@ namespace Client.Scenes.Views
             {
                 Size = new Size(85, SmallButtonHeight),
                 Location = new Point(69, 124),
-                Label = { Text = "Buy" },
+                Label = { Text = "购买" },
                 ButtonType = ButtonType.SmallButton,
                 Parent = BuyPanel,
             };
@@ -647,7 +647,7 @@ namespace Client.Scenes.Views
             ConsignTab = new DXTab
             {
                 Parent = TabControl,
-                TabButton = { Label = { Text = "Consign" } },
+                TabButton = { Label = { Text = "拍卖" } },
                 Border = true,
             };
             DXControl consignPanel = new DXControl
@@ -663,7 +663,7 @@ namespace Client.Scenes.Views
             new DXLabel
             {
                 Parent = consignPanel,
-                Text = "Step 1",
+                Text = "第一步",
                 ForeColour = Color.White,
                 AutoSize = false,
                 DrawFormat = TextFormatFlags.HorizontalCenter,
@@ -674,7 +674,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = consignPanel,
-                Text = "Select Item:",
+                Text = "选择物品:",
             };
             label.Location = new Point(80 - label.Size.Width, 30);
 
@@ -712,7 +712,7 @@ namespace Client.Scenes.Views
             new DXLabel
             {
                 Parent = consignPanel,
-                Text = "Sale History",
+                Text = "售卖记录",
                 ForeColour = Color.White,
                 AutoSize = false,
                 DrawFormat = TextFormatFlags.HorizontalCenter,
@@ -725,7 +725,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = consignPanel,
-                Text = "Number Sold:",
+                Text = "售卖数量:",
             };
             label.Location = new Point(80 - label.Size.Width, 80);
 
@@ -741,7 +741,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = consignPanel,
-                Text = "Last Price:",
+                Text = "最近成交价格:",
             };
             label.Location = new Point(80 - label.Size.Width, 100);
 
@@ -757,7 +757,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = consignPanel,
-                Text = "Avg. Price:",
+                Text = "平均成交价格:",
             };
             label.Location = new Point(80 - label.Size.Width, 120);
 
@@ -782,7 +782,7 @@ namespace Client.Scenes.Views
             new DXLabel
             {
                 Parent = ConsignBuyPanel,
-                Text = "Step 2",
+                Text = "第二部",
                 ForeColour = Color.White,
                 AutoSize = false,
                 DrawFormat = TextFormatFlags.HorizontalCenter,
@@ -793,7 +793,7 @@ namespace Client.Scenes.Views
             ConsignPriceLabel = new DXLabel
             {
                 Parent = ConsignBuyPanel,
-                Text = "Price:",
+                Text = "单价:",
             };
             ConsignPriceLabel.Location = new Point(80 - ConsignPriceLabel.Size.Width, 25);
 
@@ -824,7 +824,7 @@ namespace Client.Scenes.Views
             new DXLabel
             {
                 Parent = ConsignMesagePanel,
-                Text = "Step 3 - Message",
+                Text = "第三步 - 说明",
                 ForeColour = Color.White,
                 AutoSize = false,
                 DrawFormat = TextFormatFlags.HorizontalCenter,
@@ -853,7 +853,7 @@ namespace Client.Scenes.Views
             new DXLabel
             {
                 Parent = ConsignConfirmPanel,
-                Text = "Step 4",
+                Text = "第四步",
                 ForeColour = Color.White,
                 AutoSize = false,
                 DrawFormat = TextFormatFlags.HorizontalCenter,
@@ -864,7 +864,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = ConsignConfirmPanel,
-                Text = "Consign Cost:",
+                Text = "手续费:",
             };
             label.Location = new Point(80 - label.Size.Width, 25);
 
@@ -880,7 +880,7 @@ namespace Client.Scenes.Views
             ConsignGuildBox = new DXCheckBox
             {
                 Parent = ConsignConfirmPanel,
-                Label = { Text = "Use Guild Funds:" },
+                Label = { Text = "使用公会资金:" },
                 Enabled = false,
             };
             ConsignGuildBox.Location = new Point(169 - ConsignGuildBox.Size.Width, 45);
@@ -889,7 +889,7 @@ namespace Client.Scenes.Views
             {
                 Size = new Size(85, SmallButtonHeight),
                 Location = new Point(80, 65),
-                Label = { Text = "Consign" },
+                Label = { Text = "委托" },
                 ButtonType = ButtonType.SmallButton,
                 Parent = ConsignConfirmPanel,
             };
@@ -938,7 +938,7 @@ namespace Client.Scenes.Views
             StoreTab = new DXTab
             {
                 Parent = TabControl,
-                TabButton = { Label = { Text = "Game Store" }, Size = new Size(120, TabHeight), RightAligned = true },
+                TabButton = { Label = { Text = "游戏商店" }, Size = new Size(120, TabHeight), RightAligned = true },
                 Border = true,
             };
             StoreTab.IsVisibleChanged += (o, e) => SelectedStoreRow = null;
@@ -955,7 +955,7 @@ namespace Client.Scenes.Views
             {
                 Parent = filterPanel,
                 Location = new Point(5, 5),
-                Text = "Name:",
+                Text = "物品名称:",
             };
 
             StoreItemNameBox = new DXTextBox
@@ -972,7 +972,7 @@ namespace Client.Scenes.Views
             {
                 Parent = filterPanel,
                 Location = new Point(StoreItemNameBox.Location.X + StoreItemNameBox.Size.Width + 10, 5),
-                Text = "Item:",
+                Text = "物品:",
             };
 
 
@@ -989,7 +989,7 @@ namespace Client.Scenes.Views
             new DXListBoxItem
             {
                 Parent = StoreItemTypeBox.ListBox,
-                Label = { Text = $"All" },
+                Label = { Text = $"全部" },
                 Item = null
             };
 
@@ -1024,7 +1024,7 @@ namespace Client.Scenes.Views
             {
                 Parent = filterPanel,
                 Location = new Point(StoreItemTypeBox.Location.X + StoreItemTypeBox.Size.Width + 10, 5),
-                Text = "Sort:",
+                Text = "排列:",
             };
 
             StoreSortBox = new DXComboBox
@@ -1058,7 +1058,7 @@ namespace Client.Scenes.Views
                 Location = new Point(StoreSortBox.Location.X + StoreSortBox.Size.Width + 25, label.Location.Y - 1),
                 Parent = filterPanel,
                 ButtonType = ButtonType.SmallButton,
-                Label = { Text = "Search" }
+                Label = { Text = "搜索" }
             };
             StoreSearchButton.MouseClick += (o, e) => StoreSearch();
 
@@ -1068,7 +1068,7 @@ namespace Client.Scenes.Views
                 Location = new Point(SearchButton.Location.X + SearchButton.Size.Width + 40, label.Location.Y - 1),
                 Parent = filterPanel,
                 ButtonType = ButtonType.SmallButton,
-                Label = { Text = "Clear" }
+                Label = { Text = "清除" }
             };
             ClearButton.MouseClick += (o, e) =>
             {
@@ -1113,7 +1113,7 @@ namespace Client.Scenes.Views
             new DXLabel
             {
                 Parent = HuntGoldPanel,
-                Text = "Hunt Gold",
+                Text = "猎金",
                 ForeColour = Color.White,
                 AutoSize = false,
                 DrawFormat = TextFormatFlags.HorizontalCenter,
@@ -1124,7 +1124,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = HuntGoldPanel,
-                Text = "Amount:",
+                Text = "数量:",
                 ForeColour = Color.White,
             };
             label.Location = new Point(50 - label.Size.Width, 20);
@@ -1153,7 +1153,7 @@ namespace Client.Scenes.Views
             new DXLabel
             {
                 Parent = AddGameGoldPanel,
-                Text = "Game Gold",
+                Text = "龙币",
                 ForeColour = Color.White,
                 AutoSize = false,
                 DrawFormat = TextFormatFlags.HorizontalCenter,
@@ -1164,7 +1164,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = AddGameGoldPanel,
-                Text = "Amount:",
+                Text = "数量:",
                 ForeColour = Color.White,
             };
             label.Location = new Point(50 - label.Size.Width, 20);
@@ -1184,7 +1184,7 @@ namespace Client.Scenes.Views
             {
                 Size = new Size(85, SmallButtonHeight),
                 Location = new Point(69, 45),
-                Label = { Text = "Buy Game Gold" },
+                Label = { Text = "购买龙币" },
                 ButtonType = ButtonType.SmallButton,
                 Parent = AddGameGoldPanel,
                 Enabled = !CEnvir.TestServer
@@ -1193,7 +1193,7 @@ namespace Client.Scenes.Views
             {
                 if (GameScene.Game.Observer) return;
 
-                DXMessageBox box = new DXMessageBox("You're about to navigate to a page that could minimize your game,\nDo you want to continue?", "Buy Game Gold", DXMessageBoxButtons.YesNo);
+                DXMessageBox box = new DXMessageBox("您将导航到一个页面，该页面可能会最小化您的游戏,\n要继续吗?", "购买龙币", DXMessageBoxButtons.YesNo);
 
                 box.YesButton.MouseClick += (o1, e1) =>
                 {
@@ -1227,7 +1227,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StoreBuyPanel,
-                Text = "Count:",
+                Text = "数量:",
                 ForeColour = Color.White,
             };
             label.Location = new Point(50 - label.Size.Width, 20);
@@ -1248,7 +1248,7 @@ namespace Client.Scenes.Views
             StoreBuyPriceLabel = new DXLabel
             {
                 Parent = StoreBuyPanel,
-                Text = "G. Gold:",
+                Text = "龙币:",
                 ForeColour = Color.White,
             };
             StoreBuyPriceLabel.Location = new Point(50 - StoreBuyPriceLabel.Size.Width, 40);
@@ -1297,7 +1297,7 @@ namespace Client.Scenes.Views
             UseHuntGoldBox = new DXCheckBox
             {
                 Parent = StoreBuyPanel,
-                Label = { Text = "Use Hunt Gold:" },
+                Label = { Text = "使用猎币:" },
             };
             UseHuntGoldBox.Location = new Point(158 - UseHuntGoldBox.Size.Width, 101);
             UseHuntGoldBox.CheckedChanged += UpdateStoreBuyTotal;
@@ -1307,7 +1307,7 @@ namespace Client.Scenes.Views
             {
                 Size = new Size(85, SmallButtonHeight),
                 Location = new Point(69, 124),
-                Label = { Text = "Buy" },
+                Label = { Text = "购买" },
                 ButtonType = ButtonType.SmallButton,
                 Parent = StoreBuyPanel,
             };
@@ -1484,17 +1484,17 @@ namespace Client.Scenes.Views
             message.Append($"Price: {BuyPriceBox.Value:#,##0}");
 
             if (BuyCountBox.Value > 1)
-                message.Append(" (Each)");
+                message.Append(" (每个)");
 
             message.Append("\n\n");
 
             message.Append($"Total Cost: {BuyTotalBox.TextBox.Text}");
 
             if (BuyGuildBox.Checked)
-                message.Append(" (Using Guild Funds)");
+                message.Append(" (使用公会资金)");
 
 
-            DXMessageBox box = new DXMessageBox(message.ToString(), "Buy Confirmation", DXMessageBoxButtons.YesNo);
+            DXMessageBox box = new DXMessageBox(message.ToString(), "购买确认", DXMessageBoxButtons.YesNo);
 
             box.YesButton.MouseClick += (o1, e1) =>
             {
@@ -1510,23 +1510,23 @@ namespace Client.Scenes.Views
 
             StringBuilder message = new StringBuilder();
             
-            message.Append($"Item: {SelectedStoreRow.StoreInfo.Item.ItemName}");
+            message.Append($"物品: {SelectedStoreRow.StoreInfo.Item.ItemName}");
 
             if (StoreBuyCountBox.Value > 1)
                 message.Append($" x{StoreBuyCountBox.Value:#,##0}");
 
             message.Append("\n\n");
 
-            message.Append($"Price: {StoreBuyPriceBox.Value:#,##0}");
+            message.Append($"价格: {StoreBuyPriceBox.Value:#,##0}");
 
             if (StoreBuyCountBox.Value > 1)
-                message.Append(" (Each)");
+                message.Append(" (每个)");
 
             message.Append("\n\n");
 
-            message.Append($"Total Cost: {StoreBuyTotalBox.TextBox.Text} ({(UseHuntGoldBox.Checked ? "Hunt" : "Game")} Gold)");
+            message.Append($"总共花费: {StoreBuyTotalBox.TextBox.Text} ({(UseHuntGoldBox.Checked ? "猎" : "龙")} 币)");
 
-            DXMessageBox box = new DXMessageBox(message.ToString(), "Buy Confirmation", DXMessageBoxButtons.YesNo);
+            DXMessageBox box = new DXMessageBox(message.ToString(), "购买确认", DXMessageBoxButtons.YesNo);
 
             box.YesButton.MouseClick += (o1, e1) =>
             {
@@ -1550,14 +1550,14 @@ namespace Client.Scenes.Views
                 if (info != null)
                     StoreBuyPriceBox.Value = info.HuntGoldPrice == 0 ? info.Price : info.HuntGoldPrice;
 
-                StoreBuyPriceLabel.Text = "H. Gold:";
+                StoreBuyPriceLabel.Text = "猎币:";
             }
             else
             {
                 if (info != null)
                     StoreBuyPriceBox.Value = info.Price;
 
-                StoreBuyPriceLabel.Text = "G. Gold:";
+                StoreBuyPriceLabel.Text = "龙币:";
             }
 
             StoreBuyTotalBox.TextBox.Text = (StoreBuyCountBox.Value * StoreBuyPriceBox.Value).ToString("#,##0");
@@ -1576,13 +1576,13 @@ namespace Client.Scenes.Views
 
             if (cell.Item == null)
             {
-                GameScene.Game.ReceiveChat("Error: No Item selected.", MessageType.System);
+                GameScene.Game.ReceiveChat("错误: 未选择物品.", MessageType.System);
                 return;
             }
 
             if (Price <= 0)
             {
-                GameScene.Game.ReceiveChat("Error: Invalid Price.", MessageType.System);
+                GameScene.Game.ReceiveChat("错误: 无效价格.", MessageType.System);
                 return;
             }
             
@@ -1594,7 +1594,7 @@ namespace Client.Scenes.Views
                 displayInfo = Globals.ItemInfoList.Binding.First(x => x.Index == cell.Item.AddedStats[Stat.ItemIndex]);
 
 
-            message.Append($"Item: {displayInfo.ItemName}");
+            message.Append($"物品: {displayInfo.ItemName}");
 
             if (cell.Item.Info.Effect == ItemEffect.ItemPart)
                 message.Append(" - [Part]");
@@ -1608,16 +1608,16 @@ namespace Client.Scenes.Views
             message.Append($"Price: {Price:#,##0}");
 
             if (cell.LinkedCount > 1)
-                message.Append(" (Each)");
+                message.Append(" (每个)");
 
             message.Append("\n\n");
 
             message.Append($"Consign Cost: {Cost:#,##0}");
 
             if (ConsignGuildBox.Checked)
-                message.Append(" (Using Guild Funds)");
+                message.Append(" (使用公会资金)");
 
-            DXMessageBox box = new DXMessageBox(message.ToString(), "Consign Confirmation", DXMessageBoxButtons.YesNo);
+            DXMessageBox box = new DXMessageBox(message.ToString(), "购买确认", DXMessageBoxButtons.YesNo);
 
             box.YesButton.MouseClick += (o1, e1) =>
             {
@@ -2303,7 +2303,7 @@ namespace Client.Scenes.Views
             PriceLabelLabel = new DXLabel
             {
                 Parent = this,
-                Text = "Price:",
+                Text = "售价:",
                 ForeColour = Color.White,
                 IsControl = false,
 
@@ -2320,7 +2320,7 @@ namespace Client.Scenes.Views
             SellerLabelLabel = new DXLabel
             {
                 Parent = this,
-                Text = "Seller:",
+                Text = "卖家:",
                 ForeColour = Color.White,
                 IsControl = false,
 
@@ -2551,7 +2551,7 @@ namespace Client.Scenes.Views
             PriceLabelLabel = new DXLabel
             {
                 Parent = this,
-                Text = "Game Gold:",
+                Text = "龙币:",
                 ForeColour = Color.White,
                 IsControl = false,
 
@@ -2569,7 +2569,7 @@ namespace Client.Scenes.Views
             HuntPriceLabelLabel = new DXLabel
             {
                 Parent = this,
-                Text = "Hunt Gold:",
+                Text = "凤币:",
                 ForeColour = Color.White,
                 IsControl = false,
 

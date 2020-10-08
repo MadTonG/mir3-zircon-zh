@@ -19,7 +19,7 @@ namespace Client.Scenes.Views
 
         public ChatOptionsDialog()
         {
-            TitleLabel.Text = "Chat Options";
+            TitleLabel.Text = "聊天选项";
             HasFooter = true;
 
             SetClientSize(new Size(350, 200));
@@ -35,7 +35,7 @@ namespace Client.Scenes.Views
             DXButton button = new DXButton
             {
                 ButtonType = ButtonType.SmallButton,
-                Label = { Text = "Add" },
+                Label = { Text = "新建" },
                 Parent = this,
                 Size = new Size(50, SmallButtonHeight),
             };
@@ -46,14 +46,14 @@ namespace Client.Scenes.Views
             button = new DXButton
             {
                 ButtonType = ButtonType.Default,
-                Label = { Text = "Reset All" },
+                Label = { Text = "恢复默认" },
                 Parent = this,
                 Size = new Size(80, DefaultHeight),
                 Location = new Point(ClientArea.Right - 80 - 10, Size.Height - 43),
             };
             button.MouseClick += (o, e) =>
             {
-                DXMessageBox box = new DXMessageBox("Are you sure you want to reset ALL chat windows", "Chat Reset", DXMessageBoxButtons.YesNo);
+                DXMessageBox box = new DXMessageBox("确定要恢复所有聊天窗口默认设置吗？", "恢复默认", DXMessageBoxButtons.YesNo);
 
                 box.YesButton.MouseClick += (o1, e1) =>
                 {
@@ -68,7 +68,7 @@ namespace Client.Scenes.Views
             button = new DXButton
             {
                 ButtonType = ButtonType.Default,
-                Label = { Text = "Save All" },
+                Label = { Text = "保存设置" },
                 Parent = this,
                 Size = new Size(80, DefaultHeight),
                 Location = new Point(ClientArea.X, Size.Height - 43),
@@ -84,14 +84,14 @@ namespace Client.Scenes.Views
             button = new DXButton
             {
                 ButtonType = ButtonType.Default,
-                Label = { Text = "Reload All" },
+                Label = { Text = "重载设置" },
                 Parent = this,
                 Size = new Size(80, DefaultHeight),
                 Location = new Point(ClientArea.X + 85, Size.Height - 43),
             };
             button.MouseClick += (o, e) =>
             {
-                DXMessageBox box = new DXMessageBox("Are you sure you want to reload ALL chat windows", "Chat reload", DXMessageBoxButtons.YesNo);
+                DXMessageBox box = new DXMessageBox("您确定要重新加载所有聊天窗口设置吗？", "重载设置", DXMessageBoxButtons.YesNo);
 
                 box.YesButton.MouseClick += (o1, e1) =>
                 {
@@ -275,7 +275,7 @@ namespace Client.Scenes.Views
         {
             DXLabel label = new DXLabel
             {
-                Text = "Chat Name:",
+                Text = "窗口名称:",
                 Outline = true,
                 Parent = this,
             };
@@ -291,7 +291,7 @@ namespace Client.Scenes.Views
 
             TransparentCheckBox = new DXCheckBox
             {
-                Label = { Text = "Transparent:" },
+                Label = { Text = "透明:" },
                 Parent = this,
                 Checked = false,
             };
@@ -299,7 +299,7 @@ namespace Client.Scenes.Views
 
             AlertCheckBox = new DXCheckBox
             {
-                Label = { Text = "Show Alert:" },
+                Label = { Text = "显示告警:" },
                 Parent = this,
                 Checked = false,
             };
@@ -308,7 +308,7 @@ namespace Client.Scenes.Views
 
             LocalCheckBox = new DXCheckBox
             {
-                Label = { Text = "Local Chat:" },
+                Label = { Text = "本地:" },
                 Parent = this,
                 Checked = false,
             };
@@ -316,7 +316,7 @@ namespace Client.Scenes.Views
 
             WhisperCheckBox = new DXCheckBox
             {
-                Label = { Text = "Whisper Chat:" },
+                Label = { Text = "私聊:" },
                 Parent = this,
                 Checked = false,
             };
@@ -324,7 +324,7 @@ namespace Client.Scenes.Views
 
             GroupCheckBox = new DXCheckBox
             {
-                Label = { Text = "Group Chat:" },
+                Label = { Text = "组队:" },
                 Parent = this,
                 Checked = false,
             };
@@ -332,7 +332,7 @@ namespace Client.Scenes.Views
 
             GuildCheckBox = new DXCheckBox
             {
-                Label = { Text = "Guild Chat:" },
+                Label = { Text = "公会:" },
                 Parent = this,
                 Checked = false,
             };
@@ -340,7 +340,7 @@ namespace Client.Scenes.Views
 
             ShoutCheckBox = new DXCheckBox
             {
-                Label = { Text = "Shout Chat:" },
+                Label = { Text = "大喊:" },
                 Parent = this,
                 Checked = false,
             };
@@ -348,7 +348,7 @@ namespace Client.Scenes.Views
 
             GlobalCheckBox = new DXCheckBox
             {
-                Label = { Text = "Global Chat:" },
+                Label = { Text = "全服:" },
                 Parent = this,
                 Checked = false,
             };
@@ -356,7 +356,7 @@ namespace Client.Scenes.Views
 
             ObserverCheckBox = new DXCheckBox
             {
-                Label = { Text = "Observer Chat:" },
+                Label = { Text = "观察者:" },
                 Parent = this,
                 Checked = false,
             };
@@ -364,7 +364,7 @@ namespace Client.Scenes.Views
 
             HintCheckBox = new DXCheckBox
             {
-                Label = { Text = "Hint Text:" },
+                Label = { Text = "提示信息:" },
                 Parent = this,
                 Checked = false,
             };
@@ -372,7 +372,7 @@ namespace Client.Scenes.Views
 
             SystemCheckBox = new DXCheckBox
             {
-                Label = { Text = "System Text:" },
+                Label = { Text = "系统信息:" },
                 Parent = this,
                 Checked = false,
             };
@@ -380,7 +380,7 @@ namespace Client.Scenes.Views
 
             GainsCheckBox = new DXCheckBox
             {
-                Label = { Text = "Gains Text:" },
+                Label = { Text = "拾取信息:" },
                 Parent = this,
                 Checked = false,
             };
@@ -389,7 +389,7 @@ namespace Client.Scenes.Views
             RemoveButton = new DXButton
             {
                 ButtonType = ButtonType.SmallButton,
-                Label = { Text = "Remove" },
+                Label = { Text = "移除" },
                 Parent = this,
                 Size = new Size(50, SmallButtonHeight),
                 Location = new Point(NameTextBox.DisplayArea.Right + 10, 0),

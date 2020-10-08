@@ -251,7 +251,7 @@ namespace Client.Scenes.Views
             {
                 Parent = panel2,
                 IsControl = false,
-                Text = "AC:"
+                Text = "物防:"
             };
             label.Location = new Point(36 - label.Size.Width, 5);
 
@@ -266,7 +266,7 @@ namespace Client.Scenes.Views
             {
                 Parent = panel2,
                 IsControl = false,
-                Text = "MR:"
+                Text = "魔防:"
             };
             label.Location = new Point(125 - label.Size.Width, 5);
 
@@ -280,7 +280,7 @@ namespace Client.Scenes.Views
             {
                 Parent = panel2,
                 IsControl = false,
-                Text = "DC:"
+                Text = "破坏:"
             };
             label.Location = new Point(36 - label.Size.Width, 22);
 
@@ -297,7 +297,7 @@ namespace Client.Scenes.Views
                 LibraryFile = LibraryFile.GameInter,
                 Index = 1510,
                 Location = new Point(5, 39),
-                Hint = "Fire"
+                Hint = "火"
             };
 
             FireResistLabel = new DXLabel
@@ -313,7 +313,7 @@ namespace Client.Scenes.Views
                 LibraryFile = LibraryFile.GameInter,
                 Index = 1511,
                 Location = new Point(icon.Location.X + 43, 39),
-                Hint = "Ice"
+                Hint = "冰"
             };
 
             IceResistLabel = new DXLabel
@@ -345,7 +345,7 @@ namespace Client.Scenes.Views
                 LibraryFile = LibraryFile.GameInter,
                 Index = 1513,
                 Location = new Point(icon.Location.X + 43, 39),
-                Hint = "Wind"
+                Hint = "风"
             };
 
             WindResistLabel = new DXLabel
@@ -362,7 +362,7 @@ namespace Client.Scenes.Views
                 LibraryFile = LibraryFile.GameInter,
                 Index = 1514,
                 Location = new Point(5, 63),
-                Hint = "Holy",
+                Hint = "神圣",
             };
 
             HolyResistLabel = new DXLabel
@@ -378,7 +378,7 @@ namespace Client.Scenes.Views
                 LibraryFile = LibraryFile.GameInter,
                 Index = 1515,
                 Location = new Point(icon.Location.X + 43, 63),
-                Hint = "Dark",
+                Hint = "暗黑",
             };
 
             DarkResistLabel = new DXLabel
@@ -394,7 +394,7 @@ namespace Client.Scenes.Views
                 LibraryFile = LibraryFile.GameInter,
                 Index = 1516,
                 Location = new Point(icon.Location.X + 43, 63),
-                Hint = "Phantom",
+                Hint = "幻影",
             };
 
             PhantomResistLabel = new DXLabel

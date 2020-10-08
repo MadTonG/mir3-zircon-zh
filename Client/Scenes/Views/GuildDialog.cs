@@ -301,7 +301,7 @@ namespace Client.Scenes.Views
 
         public GuildDialog()
         {
-            TitleLabel.Text = "Guild";
+            TitleLabel.Text = "公会";
 
             SetClientSize(new Size(516, 419));
 
@@ -341,7 +341,7 @@ namespace Client.Scenes.Views
             for (int i = 0; i < GuildStorage.Length; i++)
                 GuildStorage[i] = null;
 
-            TitleLabel.Text = "Guild";
+            TitleLabel.Text = "公会";
 
             NoticeTextBox.TextBox.Text = string.Empty;
 
@@ -477,14 +477,14 @@ namespace Client.Scenes.Views
         {
             CreateTab = new DXTab
             {
-                TabButton = { Label = { Text = "Create" } },
+                TabButton = { Label = { Text = "创建" } },
                 Parent = GuildTabs,
                 Border = true,
             };
 
             DXLabel stepLabel = new DXLabel
             {
-                Text = "Step 1 - Identity",
+                Text = "第一步 - Identity",
                 Parent = CreateTab,
                 Font = new Font(Config.FontName, CEnvir.FontSize(10F), FontStyle.Bold),
                 ForeColour = Color.FromArgb(198, 166, 99),
@@ -499,7 +499,7 @@ namespace Client.Scenes.Views
 
             DXLabel label = new DXLabel
             {
-                Text = "Guild Name:",
+                Text = "公会名称:",
                 Parent = CreateTab,
                 Outline = true,
                 OutlineColour = Color.Black,
@@ -518,7 +518,7 @@ namespace Client.Scenes.Views
 
             stepLabel = new DXLabel
             {
-                Text = "Step 2 - Payment",
+                Text = "第二步 - Payment",
                 Parent = CreateTab,
                 Font = new Font(Config.FontName, CEnvir.FontSize(10F), FontStyle.Bold),
                 ForeColour = Color.FromArgb(198, 166, 99),
@@ -543,7 +543,7 @@ namespace Client.Scenes.Views
 
             HornCheckBox = new DXCheckBox
             {
-                Label = { Text = "Uma King's Horn", ForeColour = Color.White },
+                Label = { Text = "袄玛号角", ForeColour = Color.White },
                 Parent = CreateTab,
                 ReadOnly = true,
             };
@@ -563,7 +563,7 @@ namespace Client.Scenes.Views
 
             stepLabel = new DXLabel
             {
-                Text = "Step 3 - Options",
+                Text = "第三步 - Options",
                 Parent = CreateTab,
                 Font = new Font(Config.FontName, CEnvir.FontSize(10F), FontStyle.Bold),
                 ForeColour = Color.FromArgb(198, 166, 99),
@@ -645,7 +645,7 @@ namespace Client.Scenes.Views
 
             stepLabel = new DXLabel
             {
-                Text = "Step 4 - Summary",
+                Text = "第四步 - Summary",
                 Parent = CreateTab,
                 Font = new Font(Config.FontName, CEnvir.FontSize(10F), FontStyle.Bold),
                 ForeColour = Color.FromArgb(198, 166, 99),
@@ -659,7 +659,7 @@ namespace Client.Scenes.Views
 
             label = new DXLabel
             {
-                Text = "Gold Cost:",
+                Text = "花费金币:",
                 Parent = CreateTab,
                 Outline = true,
                 OutlineColour = Color.Black,
@@ -684,7 +684,7 @@ namespace Client.Scenes.Views
                 Parent = CreateTab,
                 ButtonType = ButtonType.SmallButton,
                 Size = new Size(110, SmallButtonHeight),
-                Label = { Text = "Create Guild" },
+                Label = { Text = "创建公会" },
                 Location = new Point(TotalCostBox.Location.X, TotalCostBox.Location.Y + 30)
             };
 
@@ -695,7 +695,7 @@ namespace Client.Scenes.Views
                 Parent = CreateTab,
                 ButtonType = ButtonType.SmallButton,
                 Size = new Size(120, SmallButtonHeight),
-                Label = { Text = "Join Starter Guild" },
+                Label = { Text = "加入 【Starter】 公会" },
                 Location = new Point(ClientArea.Left, TotalCostBox.Location.Y + 40)
             };
             StarterGuildButton.MouseClick += StarterGuildButton_MouseClick;

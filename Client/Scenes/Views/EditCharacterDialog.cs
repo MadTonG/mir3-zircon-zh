@@ -259,13 +259,13 @@ namespace Client.Scenes.Views
         {
             Size = new Size(260, 650 - 90);
             HasFooter = true;
-            TitleLabel.Text = "Change";
+            TitleLabel.Text = "修改";
             CloseButton.MouseClick += (o, e) => Close();
 
             ChangeButton = new DXButton
             {
                 Parent = this,
-                Label = { Text = "Confirm" },
+                Label = { Text = "确认" },
                 Location = new Point((Size.Width - 80) / 2, Size.Height - 43),
                 Size = new Size(80, DefaultHeight),
             };
@@ -517,7 +517,7 @@ namespace Client.Scenes.Views
             CharacterNameTextBoxLabel = new DXLabel
             {
                 Parent = this,
-                Text = "Name:",
+                Text = "角色名:",
             };
             CharacterNameTextBoxLabel.Location = new Point(CharacterNameTextBox.Location.X - CharacterNameTextBoxLabel.Size.Width - 5, (CharacterNameTextBox.Size.Height - CharacterNameTextBoxLabel.Size.Height) / 2 + CharacterNameTextBox.Location.Y);
 
@@ -526,7 +526,7 @@ namespace Client.Scenes.Views
                 Visible = false,
                 Parent = this,
                 Text = "[?]",
-                Hint = $"Character Name.\nAccepted characters: a-z A-Z 0-9.\nLength: between {Globals.MinCharacterNameLength} and {Globals.MaxCharacterNameLength} characters.\nCan use previous names on same account.",
+                Hint = $"角色名.\n合法角色名: a-z A-Z 0-9.\n长度介于 {Globals.MinCharacterNameLength} 和 {Globals.MaxCharacterNameLength} 个字符.\n可以在同一帐户上使用以前的名字.",
             };
             CharacterNameHelpLabel.Location = new Point(CharacterNameTextBox.Location.X + CharacterNameTextBox.Size.Width + 2, (CharacterNameTextBox.Size.Height - CharacterNameHelpLabel.Size.Height) / 2 + CharacterNameTextBox.Location.Y);
 
