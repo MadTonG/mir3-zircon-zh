@@ -4,6 +4,8 @@ using System.Windows.Forms;
 using Client.Controls;
 using Client.Envir;
 using Client.UserModels;
+using System.Reflection;
+using System.ComponentModel;
 using Library;
 using S =  Library.Network.ServerPackets;
 using C = Library.Network.ClientPackets;
@@ -273,39 +275,37 @@ namespace Client.Scenes.Views
                 Class = (RequiredClass?) RequiredClassBox.SelectedItem ?? RequiredClass.All;
                 Config.RankingClass = (int)Class;
             };
-            //  RequiredClassBox.Location = new Point(ClientArea.Right - RefineQualityBox.Size.Width - 160, BlackIronGrid.Location.Y);
-
 
             new DXListBoxItem
             {
                 Parent = RequiredClassBox.ListBox,
-                Label = { Text = $"{RequiredClass.All}" },
+                Label = { Text = typeof(RequiredClass).GetMember(RequiredClass.All.ToString())[0].GetCustomAttribute<DescriptionAttribute>()?.Description ?? $"{RequiredClass.All}" },
                 Item = RequiredClass.All
             };
 
             new DXListBoxItem
             {
                 Parent = RequiredClassBox.ListBox,
-                Label = { Text = $"{RequiredClass.Warrior}" },
+                Label = { Text = typeof(RequiredClass).GetMember(RequiredClass.Warrior.ToString())[0].GetCustomAttribute<DescriptionAttribute>()?.Description ?? $"{RequiredClass.Warrior}" },
                 Item = RequiredClass.Warrior
             };
             new DXListBoxItem
             {
                 Parent = RequiredClassBox.ListBox,
-                Label = { Text = $"{RequiredClass.Wizard}" },
+                Label = { Text = typeof(RequiredClass).GetMember(RequiredClass.Wizard.ToString())[0].GetCustomAttribute<DescriptionAttribute>()?.Description ?? $"{RequiredClass.Wizard}" },
                 Item = RequiredClass.Wizard
             };
             new DXListBoxItem
             {
                 Parent = RequiredClassBox.ListBox,
-                Label = { Text = $"{RequiredClass.Taoist}" },
+                Label = { Text = typeof(RequiredClass).GetMember(RequiredClass.Taoist.ToString())[0].GetCustomAttribute<DescriptionAttribute>()?.Description ?? $"{RequiredClass.Taoist}" },
                 Item = RequiredClass.Taoist
             };
 
             new DXListBoxItem
             {
                 Parent = RequiredClassBox.ListBox,
-                Label = { Text = $"{RequiredClass.Assassin}" },
+                Label = { Text = typeof(RequiredClass).GetMember(RequiredClass.Assassin.ToString())[0].GetCustomAttribute<DescriptionAttribute>()?.Description ?? $"{RequiredClass.Assassin}" },
                 Item = RequiredClass.Assassin
             };
 
@@ -462,10 +462,10 @@ namespace Client.Scenes.Views
         public void OnHeaderChanged(bool oValue, bool nValue)
         {
             RankLabel.Text = "#";
-            NameLabel.Text = "Name";
-            ClassLabel.Text = "Class";
-            LevelLabel.Text = "Level";
-            RebirthLabel.Text = "Rebirth";
+            NameLabel.Text = "角色名";
+            ClassLabel.Text = "职业";
+            LevelLabel.Text = "等级";
+            RebirthLabel.Text = "转生";
 
             DrawTexture = false;
 
@@ -571,7 +571,7 @@ namespace Client.Scenes.Views
             }
 
             Rank = null;
-            NameLabel.Text = "Updating...";
+            NameLabel.Text = "更新中...";
             NameLabel.ForeColour = Color.Orange;
             Visible = true;
 
@@ -671,7 +671,7 @@ namespace Client.Scenes.Views
             {
                 if (GameScene.Game != null && CEnvir.Now < GameScene.Game.User.CombatTime.AddSeconds(10) && !GameScene.Game.Observer)
                 {
-                    GameScene.Game.ReceiveChat("在战斗中无法观看.", MessageType.System);
+                    GameScene.Game.ReceiveChat("角色在战斗中无法观看.", MessageType.System);
                     return;
                 }
 

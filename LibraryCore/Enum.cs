@@ -75,9 +75,13 @@ namespace Library
     public enum RequiredClass : byte
     {
         None = 0,
+        [Description("战士")]
         Warrior = 1,
+        [Description("法师")]
         Wizard = 2,
+        [Description("道士")]
         Taoist = 4,
+        [Description("刺客")]
         Assassin = 8,
         [Description("战士, 法师, 道士")]
         WarWizTao = Warrior | Wizard | Taoist,
@@ -85,6 +89,7 @@ namespace Library
         WizTao = Wizard | Taoist,
         [Description("战士, 刺客")]
         AssWar = Warrior | Assassin,
+        [Description("全职业")]
         All = WarWizTao | Assassin
     }
 
