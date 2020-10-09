@@ -3532,8 +3532,11 @@ namespace Client.Scenes
         public void ClassChanged()
         {
             if (User == null) return;
-            
-            MainPanel.ClassLabel.Text = User.Class.ToString();
+
+            Type type = typeof(AttackMode);
+            MemberInfo[] infos = type.GetMember(User.Class.ToString());
+            DescriptionAttribute description = infos[0].GetCustomAttribute<DescriptionAttribute>();
+            MainPanel.ClassLabel.Text = description?.Description ?? User.Class.ToString();
 
             foreach (NPCGoodsCell cell in NPCGoodsBox.Cells)
                 cell.UpdateColours();
