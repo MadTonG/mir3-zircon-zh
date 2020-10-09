@@ -9,43 +9,49 @@ namespace Library
 {
     public enum MirGender : byte
     {
+        [Description("男")]
         Male,
+        [Description("女")]
         Female
     }
 
     public enum MirClass : byte
     {
+        [Description("战士")]
         Warrior,
+        [Description("法师")]
         Wizard,
+        [Description("道士")]
         Taoist,
+        [Description("刺客")]
         Assassin,
     }
 
     public enum AttackMode : byte
     {
-        [Description("Attack: Peaceful")]
+        [Description("模式：和平攻击")]
         Peace,
-        [Description("Attack: Group")]
+        [Description("模式: 组队攻击")]
         Group,
-        [Description("Attack: Guild")]
+        [Description("模式: 行会攻击")]
         Guild,
-        [Description("Attack: War, Red, Brown")]
+        [Description("模式: War, Red, Brown")]
         WarRedBrown,
-        [Description("Attack: All")]
+        [Description("模式: 全部攻击")]
         All
     }
 
     public enum PetMode : byte
     {
-        [Description("Pet: Move, Attack")]
+        [Description("宠物: 移动, 攻击")]
         Both,
-        [Description("Pet: Move")]
+        [Description("宠物: 移动")]
         Move,
-        [Description("Pet: Attack")]
+        [Description("宠物: Attack")]
         Attack,
-        [Description("Pet: PvP")]
+        [Description("宠物: PvP")]
         PvP,
-        [Description("Pet: None")]
+        [Description("宠物: None")]
         None,
     }
 
@@ -73,11 +79,11 @@ namespace Library
         Wizard = 2,
         Taoist = 4,
         Assassin = 8,
-        [Description("Warrior, Wizard, Taoist")]
+        [Description("战士, 法师, 道士")]
         WarWizTao = Warrior | Wizard | Taoist,
-        [Description("Wizard, Taoist")]
+        [Description("法师, 道士")]
         WizTao = Wizard | Taoist,
-        [Description("Warrior, Assassin")]
+        [Description("战士, 刺客")]
         AssWar = Warrior | Assassin,
         All = WarWizTao | Assassin
     }

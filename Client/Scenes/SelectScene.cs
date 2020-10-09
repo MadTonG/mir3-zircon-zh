@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
+using System.ComponentModel;
 using System.Windows.Forms;
 using Client.Controls;
 using Client.Envir;
@@ -809,7 +811,15 @@ namespace Client.Scenes
                         break;
                 }
 
-                SelectedClassLabel.Text = SelectedClass.ToString();
+                //SelectedClassLabel.Text = SelectedClass.ToString();
+                //通过职业枚举描述信息显示职业中文名称
+                Type type = typeof(MirClass);
+
+                MemberInfo[] infos = type.GetMember(SelectedClass.ToString());
+
+                DescriptionAttribute description = infos[0].GetCustomAttribute<DescriptionAttribute>();
+
+                SelectedClassLabel.Text = description?.Description ?? SelectedClass.ToString();
             }
 
             #endregion
