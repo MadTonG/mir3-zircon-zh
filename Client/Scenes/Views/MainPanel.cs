@@ -271,6 +271,7 @@ namespace Client.Scenes.Views
             {
                 Parent = this,
                 Font = new Font(Config.FontName, CEnvir.FontSize(9F), FontStyle.Bold),
+                Text = "AC",
                 Text = "防御",
             };
             label.Location = new Point(385 - label.Size.Width, 20);
@@ -288,6 +289,7 @@ namespace Client.Scenes.Views
                 Parent = this,
                 Font = new Font(Config.FontName, CEnvir.FontSize(9F), FontStyle.Bold),
                 Text = "DC",
+                Hint = "破坏",
             };
             label.Location = new Point(385 - label.Size.Width, 40);
 
@@ -296,6 +298,7 @@ namespace Client.Scenes.Views
                 Parent = this,
                 Font = new Font(Config.FontName, CEnvir.FontSize(9F), FontStyle.Bold),
                 Text = "MC",
+                Hint = "魔法",
             };
             MCLabelLabel.Location = new Point(470 - MCLabelLabel.Size.Width, 40);
 
@@ -304,6 +307,7 @@ namespace Client.Scenes.Views
                 Parent = this,
                 Font = new Font(Config.FontName, CEnvir.FontSize(9F), FontStyle.Bold),
                 Text = "SC",
+                Hint = "道术",
             };
             SCLabelLabel.Location = new Point(470 - SCLabelLabel.Size.Width, 40);
 

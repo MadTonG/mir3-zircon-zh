@@ -255,7 +255,7 @@ namespace Client.Scenes.Views
             OnlineOnlyBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "在线" },
+                Label = { Text = "在线玩家" },
             };
             OnlineOnlyBox.CheckedChanged += (o, e) =>
             {
@@ -462,7 +462,7 @@ namespace Client.Scenes.Views
         public void OnHeaderChanged(bool oValue, bool nValue)
         {
             RankLabel.Text = "#";
-            NameLabel.Text = "角色名";
+            NameLabel.Text = "角色";
             ClassLabel.Text = "职业";
             LevelLabel.Text = "等级";
             RebirthLabel.Text = "转生";
@@ -513,10 +513,14 @@ namespace Client.Scenes.Views
             }
             else
             {
+                Type type = typeof(MirClass);
+                MemberInfo[] infos = type.GetMember(Rank.Class.ToString());
+                DescriptionAttribute description = infos[0].GetCustomAttribute<DescriptionAttribute>();
+
                 Visible = true;
                 RankLabel.Text = Rank.Rank.ToString();
-                NameLabel.Text = Rank.Name;
-                ClassLabel.Text = Rank.Class.ToString();
+                NameLabel.Text = Rank.Name.ToString();
+                ClassLabel.Text = description?.Description ?? Rank.Class.ToString();
                 RebirthLabel.Text = Rank.Rebirth.ToString();
 
                 RankLabel.ForeColour = Color.Silver;
