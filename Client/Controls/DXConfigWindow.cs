@@ -170,7 +170,7 @@ namespace Client.Controls
             
             FullScreenCheckBox = new DXCheckBox
             {
-                Label = { Text = "Full Screen:" },
+                Label = { Text = "全屏显示:" },
                 Parent = GraphicsTab,
                 Checked = Config.FullScreen,
             };
@@ -178,7 +178,7 @@ namespace Client.Controls
 
             DXLabel label = new DXLabel
             {
-                Text = "Game Size:",
+                Text = "游戏分辨率:",
                 Outline = true,
                 Parent = GraphicsTab,
             };
@@ -215,7 +215,7 @@ namespace Client.Controls
 
             ClipMouseCheckBox = new DXCheckBox
             {
-                Label = { Text = "Clip Mouse:" },
+                Label = { Text = "使用Clip鼠标:" },
                 Parent = GraphicsTab,
             };
             ClipMouseCheckBox.Location = new Point(120 - ClipMouseCheckBox.Size.Width, 100);
@@ -390,7 +390,7 @@ namespace Client.Controls
 
             EscapeCloseAllCheckBox = new DXCheckBox
             {
-                Label = { Text = "ESC关闭窗口:" },
+                Label = { Text = "ESC关闭所有窗口:" },
                 Parent = GameTab,
             };
             EscapeCloseAllCheckBox.Location = new Point(270 - EscapeCloseAllCheckBox.Size.Width, 10);
@@ -399,15 +399,15 @@ namespace Client.Controls
             {
                 Label = { Text = "Shift + 1  快捷聊天:" },
                 Parent = GameTab,
-                Hint = "If turned on, Pressing Shift + 1 will open chat, if this is off you will use Quick Slot 1"
+                Hint = "如果打开，则按Shift + 1将打开聊天，如果关闭，则将使用物品快捷栏槽1。"
             };
             ShiftOpenChatCheckBox.Location = new Point(270 - ShiftOpenChatCheckBox.Size.Width, 35);
 
             RightClickDeTargetCheckBox = new DXCheckBox
             {
-                Label = { Text = "Right Click De-Target:" },
+                Label = { Text = "右键取消目标:" },
                 Parent = GameTab,
-                Hint = "If turned on, Right clicking to move away will also remove monster target."
+                Hint = "如果开启，单击右键取消目标锁定。"
             };
             RightClickDeTargetCheckBox.Location = new Point(270 - RightClickDeTargetCheckBox.Size.Width, 60);
 
