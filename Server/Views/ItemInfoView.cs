@@ -91,8 +91,8 @@ namespace Server.Views
             builder.Append((info?.Durability.ToString() ?? "Durability") + ", ");
             builder.Append((info?.Rarity.ToString() ?? "Rarity") + ", ");
 
-            builder.Append((info == null ? "AC" : string.Format("{0}-{1}", info.Stats[Stat.MinAC], info.Stats[Stat.MaxAC])) + ", ");
-            builder.Append((info == null ? "MR" : string.Format("{0}-{1}", info.Stats[Stat.MinMR], info.Stats[Stat.MaxMR])) + ", ");
+            builder.Append((info == null ? "防御" : string.Format("{0}-{1}", info.Stats[Stat.MinAC], info.Stats[Stat.MaxAC])) + ", ");
+            builder.Append((info == null ? "魔御" : string.Format("{0}-{1}", info.Stats[Stat.MinMR], info.Stats[Stat.MaxMR])) + ", ");
             builder.Append((info == null ? "DC" : string.Format("{0}-{1}", info.Stats[Stat.MinDC], info.Stats[Stat.MaxDC])) + ", ");
             builder.Append((info == null ? "MC" : string.Format("{0}-{1}", info.Stats[Stat.MinMC], info.Stats[Stat.MaxMC])) + ", ");
             builder.Append((info == null ? "SC" : string.Format("{0}-{1}", info.Stats[Stat.MinSC], info.Stats[Stat.MaxSC])) + ", ");

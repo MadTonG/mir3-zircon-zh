@@ -435,23 +435,23 @@ namespace Library
 
     public enum Stat
     {
-        [StatDescription(Title = "Base Health", Format = "{0:+#0;-#0;#0}", Mode = StatType.None)]
+        [StatDescription(Title = "基础生命值", Format = "{0:+#0;-#0;#0}", Mode = StatType.None)]
         BaseHealth,
-        [StatDescription(Title = "Base Mana", Format = "{0:+#0;-#0;#0}", Mode = StatType.None)]
+        [StatDescription(Title = "基础魔法值", Format = "{0:+#0;-#0;#0}", Mode = StatType.None)]
         BaseMana,
 
-        [StatDescription(Title = "Health", Format = "{0:+#0;-#0;#0}", Mode = StatType.Default)]
+        [StatDescription(Title = "生命值", Format = "{0:+#0;-#0;#0}", Mode = StatType.Default)]
         Health,
-        [StatDescription(Title = "Mana", Format = "{0:+#0;-#0;#0}", Mode = StatType.Default)]
+        [StatDescription(Title = "魔法值", Format = "{0:+#0;-#0;#0}", Mode = StatType.Default)]
         Mana,
 
-        [StatDescription(Title = "AC", Format = "{0}-0", Mode = StatType.Min, MinStat = MinAC, MaxStat = MaxAC)]
+        [StatDescription(Title = "防御", Format = "{0}-0", Mode = StatType.Min, MinStat = MinAC, MaxStat = MaxAC)]
         MinAC,
-        [StatDescription(Title = "AC", Format = "{0}-{1}", Mode = StatType.Max, MinStat = MinAC, MaxStat = MaxAC)]
+        [StatDescription(Title = "防御", Format = "{0}-{1}", Mode = StatType.Max, MinStat = MinAC, MaxStat = MaxAC)]
         MaxAC,
-        [StatDescription(Title = "MR", Format = "{0}-0", Mode = StatType.Min, MinStat = MinMR, MaxStat = MaxMR)]
+        [StatDescription(Title = "魔御", Format = "{0}-0", Mode = StatType.Min, MinStat = MinMR, MaxStat = MaxMR)]
         MinMR,
-        [StatDescription(Title = "MR", Format = "{0}-{1}", Mode = StatType.Max, MinStat = MinMR, MaxStat = MaxMR)]
+        [StatDescription(Title = "魔御", Format = "{0}-{1}", Mode = StatType.Max, MinStat = MinMR, MaxStat = MaxMR)]
         MaxMR,
         [StatDescription(Title = "DC", Format = "{0}-0", Mode = StatType.Min, MinStat = MinDC, MaxStat = MaxDC)]
         MinDC,
@@ -480,39 +480,39 @@ namespace Library
         [StatDescription(Title = "Luck", Format = "{0:+#0;-#0;#0}", Mode = StatType.Default)]
         Luck, //does nothing at the moment
 
-        [StatDescription(Title = "Fire", Format = "{0:+#0;-#0;#0}", Mode = StatType.AttackElement)]
+        [StatDescription(Title = "火", Format = "{0:+#0;-#0;#0}", Mode = StatType.AttackElement)]
         FireAttack,
-        [StatDescription(Title = "Fire", Format = "{0:+#0;-#0;#0}", Mode = StatType.ElementResistance)]
+        [StatDescription(Title = "火", Format = "{0:+#0;-#0;#0}", Mode = StatType.ElementResistance)]
         FireResistance,
 
-        [StatDescription(Title = "Ice", Format = "{0:+#0;-#0;#0}", Mode = StatType.AttackElement)]
+        [StatDescription(Title = "冰", Format = "{0:+#0;-#0;#0}", Mode = StatType.AttackElement)]
         IceAttack,
-        [StatDescription(Title = "Ice", Format = "{0:+#0;-#0;#0}", Mode = StatType.ElementResistance)]
+        [StatDescription(Title = "冰", Format = "{0:+#0;-#0;#0}", Mode = StatType.ElementResistance)]
         IceResistance,
 
-        [StatDescription(Title = "Lightning", Format = "{0:+#0;-#0;#0}", Mode = StatType.AttackElement)]
+        [StatDescription(Title = "雷", Format = "{0:+#0;-#0;#0}", Mode = StatType.AttackElement)]
         LightningAttack,
-        [StatDescription(Title = "Lightning", Format = "{0:+#0;-#0;#0}", Mode = StatType.ElementResistance)]
+        [StatDescription(Title = "雷", Format = "{0:+#0;-#0;#0}", Mode = StatType.ElementResistance)]
         LightningResistance,
         
-        [StatDescription(Title = "Wind", Format = "{0:+#0;-#0;#0}", Mode = StatType.AttackElement)]
+        [StatDescription(Title = "风", Format = "{0:+#0;-#0;#0}", Mode = StatType.AttackElement)]
         WindAttack,
-        [StatDescription(Title = "Wind", Format = "{0:+#0;-#0;#0}", Mode = StatType.ElementResistance)]
+        [StatDescription(Title = "风", Format = "{0:+#0;-#0;#0}", Mode = StatType.ElementResistance)]
         WindResistance,
         
-        [StatDescription(Title = "Holy", Format = "{0:+#0;-#0;#0}", Mode = StatType.AttackElement)]
+        [StatDescription(Title = "神圣", Format = "{0:+#0;-#0;#0}", Mode = StatType.AttackElement)]
         HolyAttack,
-        [StatDescription(Title = "Holy", Format = "{0:+#0;-#0;#0}", Mode = StatType.ElementResistance)]
+        [StatDescription(Title = "神圣", Format = "{0:+#0;-#0;#0}", Mode = StatType.ElementResistance)]
         HolyResistance,
 
-        [StatDescription(Title = "Dark", Format = "{0:+#0;-#0;#0}", Mode = StatType.AttackElement)]
+        [StatDescription(Title = "暗黑", Format = "{0:+#0;-#0;#0}", Mode = StatType.AttackElement)]
         DarkAttack,
-        [StatDescription(Title = "Dark", Format = "{0:+#0;-#0;#0}", Mode = StatType.ElementResistance)]
+        [StatDescription(Title = "暗黑", Format = "{0:+#0;-#0;#0}", Mode = StatType.ElementResistance)]
         DarkResistance,
 
-        [StatDescription(Title = "Phantom", Format = "{0:+#0;-#0;#0}", Mode = StatType.AttackElement)]
+        [StatDescription(Title = "幻影", Format = "{0:+#0;-#0;#0}", Mode = StatType.AttackElement)]
         PhantomAttack,
-        [StatDescription(Title = "Phantom", Format = "{0:+#0;-#0;#0}", Mode = StatType.ElementResistance)]
+        [StatDescription(Title = "幻影", Format = "{0:+#0;-#0;#0}", Mode = StatType.ElementResistance)]
         PhantomResistance,
 
         [StatDescription(Title = "Comfort", Format = "{0:+#0;-#0;#0}", Mode = StatType.Default)]
@@ -732,7 +732,7 @@ namespace Library
         [StatDescription(Title = "Death Drops Enabled.", Mode = StatType.Text)]
         DeathDrops,
 
-        [StatDescription(Title = "Physical", Format = "{0:+#0;-#0;#0}", Mode = StatType.ElementResistance)]
+        [StatDescription(Title = "物理", Format = "{0:+#0;-#0;#0}", Mode = StatType.ElementResistance)]
         PhysicalResistance,
 
         [StatDescription(Title = "Success Rate Per Fragment", Format = "{0:+#0%;-#0%;#0%}", Mode = StatType.Percent)]

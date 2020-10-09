@@ -37,7 +37,7 @@ namespace Client.Models
             {
                 itemInfo = Globals.ItemInfoList.Binding.First(x => x.Index == Item.AddedStats[Stat.ItemIndex]);
 
-                Title = "[Part]";
+                Title = "[碎片]";
             }
 
             Name = Item.Count > 1 ? $"{itemInfo.ItemName} ({Item.Count})" : itemInfo.ItemName;

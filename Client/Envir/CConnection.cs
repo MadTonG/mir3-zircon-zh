@@ -1586,7 +1586,7 @@ namespace Client.Envir
             }
 
 
-            string message = $"获得经验 {p.Amount:#,##0.#}";
+            string message = $"得到经验值 {p.Amount:#,##0.#}";
 
             if (weapon != null && weapon.Info.Effect != ItemEffect.PickAxe && (weapon.Flags & UserItemFlags.Refinable) != UserItemFlags.Refinable && (weapon.Flags & UserItemFlags.NonRefinable) != UserItemFlags.NonRefinable && weapon.Level < Globals.WeaponExperienceList.Count)
             {
@@ -1601,7 +1601,7 @@ namespace Client.Envir
                     message += ", 您的武器已准备精炼";
                 }
                 else
-                    message += $", 武器经验 {p.Amount/10:#,##0.#}";
+                    message += $", 武器经验值 {p.Amount/10:#,##0.#}";
             }
             
             GameScene.Game.ReceiveChat(message + ".", MessageType.Combat);
@@ -1665,7 +1665,7 @@ namespace Client.Envir
                     text += " (任务)";
 
                 if (item.Info.Effect == ItemEffect.ItemPart)
-                    text += " [Part]";
+                    text += " [碎片]";
 
                 GameScene.Game.ReceiveChat(text, MessageType.Combat);
             }
@@ -3794,13 +3794,13 @@ namespace Client.Envir
                     displayInfo = Globals.ItemInfoList.Binding.First(x => x.Index == item.AddedStats[Stat.ItemIndex]);
                 
                 item.New = true;
-                string text = item.Count > 1 ? $"你的宠物拾取物品 【{displayInfo.ItemName}】 x:{item.Count}." : $"你的宠物拾取物品 【{displayInfo.ItemName}】.";
+                string text = item.Count > 1 ? $"你的宠物拾取 【{displayInfo.ItemName}】 x:{item.Count}." : $"你的宠物拾取 【{displayInfo.ItemName}】.";
 
                 if ((item.Flags & UserItemFlags.QuestItem) == UserItemFlags.QuestItem)
                     text += " (任务)";
 
                 if (item.Info.Effect == ItemEffect.ItemPart)
-                    text += " [Part]";
+                    text += " [碎片]";
 
                 GameScene.Game.ReceiveChat(text, MessageType.Combat);
             }

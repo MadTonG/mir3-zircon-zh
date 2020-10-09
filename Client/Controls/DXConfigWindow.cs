@@ -116,7 +116,7 @@ namespace Client.Controls
             ActiveConfig = this;
 
             Size = new Size(300, 305);
-            TitleLabel.Text = "Configuration";
+            TitleLabel.Text = "游戏设置";
             HasFooter = true;
 
             TabControl = new DXTabControl
@@ -129,35 +129,35 @@ namespace Client.Controls
             {
                 Parent = TabControl,
                 Border = true,
-                TabButton = { Label = { Text = "Graphics" } },
+                TabButton = { Label = { Text = "图像" } },
             };
 
             SoundTab = new DXTab
             {
                 Parent = TabControl,
                 Border = true,
-                TabButton = { Label = { Text = "Sound" } },
+                TabButton = { Label = { Text = "声音" } },
             };
 
             GameTab = new DXTab
             {
                 Parent = TabControl,
                 Border = true,
-                TabButton = { Label = { Text = "Game" } },
+                TabButton = { Label = { Text = "游戏" } },
             };
 
             NetworkTab = new DXTab
             {
                 Parent = TabControl,
                 Border = true,
-                TabButton = { Label = { Text = "Network" } },
+                TabButton = { Label = { Text = "网络" } },
             };
 
             ColourTab = new DXTab
             {
                 Parent = TabControl,
                 Border = true,
-                TabButton = { Label = { Text = "Colours" }, Visible = false },
+                TabButton = { Label = { Text = "颜色" }, Visible = false },
             };
 
 
@@ -490,7 +490,7 @@ namespace Client.Controls
 
             label = new DXLabel
             {
-                Text = "Local Chat:",
+                Text = "本地聊天:",
                 Outline = true,
                 Parent = ColourTab,
             };
@@ -505,7 +505,7 @@ namespace Client.Controls
 
             label = new DXLabel
             {
-                Text = "GM Whisper In:",
+                Text = "GM私聊:",
                 Outline = true,
                 Parent = ColourTab,
             };
@@ -520,7 +520,7 @@ namespace Client.Controls
 
             label = new DXLabel
             {
-                Text = "Whisper In:",
+                Text = "对你私聊:",
                 Outline = true,
                 Parent = ColourTab,
             };
@@ -535,7 +535,7 @@ namespace Client.Controls
 
             label = new DXLabel
             {
-                Text = "Whisper Out:",
+                Text = "对玩家私聊:",
                 Outline = true,
                 Parent = ColourTab,
             };
@@ -550,7 +550,7 @@ namespace Client.Controls
 
             label = new DXLabel
             {
-                Text = "Group Chat:",
+                Text = "组队聊天:",
                 Outline = true,
                 Parent = ColourTab,
             };
@@ -565,7 +565,7 @@ namespace Client.Controls
 
             label = new DXLabel
             {
-                Text = "Guild Chat:",
+                Text = "公会聊天:",
                 Outline = true,
                 Parent = ColourTab,
             };
@@ -580,7 +580,7 @@ namespace Client.Controls
 
             label = new DXLabel
             {
-                Text = "Shout Chat:",
+                Text = "大喊:",
                 Outline = true,
                 Parent = ColourTab,
             };
@@ -595,7 +595,7 @@ namespace Client.Controls
 
             label = new DXLabel
             {
-                Text = "Global Chat:",
+                Text = "全局聊天:",
                 Outline = true,
                 Parent = ColourTab,
             };
@@ -611,7 +611,7 @@ namespace Client.Controls
 
             label = new DXLabel
             {
-                Text = "Observer Chat:",
+                Text = "观看聊天:",
                 Outline = true,
                 Parent = ColourTab,
             };
@@ -626,7 +626,7 @@ namespace Client.Controls
 
             label = new DXLabel
             {
-                Text = "Hint Text:",
+                Text = "提示信息:",
                 Outline = true,
                 Parent = ColourTab,
             };
@@ -641,7 +641,7 @@ namespace Client.Controls
 
             label = new DXLabel
             {
-                Text = "System Text:",
+                Text = "系统信息:",
                 Outline = true,
                 Parent = ColourTab,
             };
@@ -656,7 +656,7 @@ namespace Client.Controls
 
             label = new DXLabel
             {
-                Text = "Gains Text:",
+                Text = "拾取信息:",
                 Outline = true,
                 Parent = ColourTab,
             };
@@ -671,7 +671,7 @@ namespace Client.Controls
 
             label = new DXLabel
             {
-                Text = "Announcements:",
+                Text = "游戏公告:",
                 Outline = true,
                 Parent = ColourTab,
             };
@@ -690,7 +690,7 @@ namespace Client.Controls
                 Location = new Point(180, 160),
                 Size = new Size(80, SmallButtonHeight),
                 ButtonType = ButtonType.SmallButton,
-                Label = { Text = "Reset All" }
+                Label = { Text = "恢复默认" }
             };
             ResetColoursButton.MouseClick += (o, e) =>
             {
@@ -716,7 +716,7 @@ namespace Client.Controls
                 Location = new Point(Size.Width - 190, Size.Height - 43),
                 Size = new Size(80, DefaultHeight),
                 Parent = this,
-                Label = { Text = "Apply" }
+                Label = { Text = "应用" }
             };
             SaveButton.MouseClick += SaveSettings;
 
@@ -725,7 +725,7 @@ namespace Client.Controls
                 Location = new Point(Size.Width - 100, Size.Height - 43),
                 Size = new Size(80, DefaultHeight),
                 Parent = this,
-                Label = { Text = "Cancel" }
+                Label = { Text = "取消" }
             };
             CancelButton.MouseClick += CancelSettings;
 
@@ -734,7 +734,7 @@ namespace Client.Controls
                 Location = new Point(Size.Width - 280, Size.Height - 43),
                 Size = new Size(60, DefaultHeight),
                 Parent = this,
-                Label = { Text = "Exit" },
+                Label = { Text = "退出" },
                 Visible = false,
             };
             ExitButton.MouseClick += CancelSettings;

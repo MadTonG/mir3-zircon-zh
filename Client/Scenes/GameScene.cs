@@ -1442,7 +1442,7 @@ namespace Client.Scenes
             };
 
             if (MouseItem.Info.Effect == ItemEffect.ItemPart)
-                label.Text += " - [Part]";
+                label.Text += " - [碎片]";
             ItemLabel.Size = new Size(label.DisplayArea.Right + 4, label.DisplayArea.Bottom);
 
 
@@ -1688,12 +1688,12 @@ namespace Client.Scenes
                             colour = Color.Red;
                         break;
                     case RequiredType.AC:
-                        text = $"物防要求: {MouseItem.Info.RequiredAmount}";
+                        text = $"防御要求: {MouseItem.Info.RequiredAmount}";
                         if (User.Stats[Stat.MaxAC] < MouseItem.Info.RequiredAmount)
                             colour = Color.Red;
                         break;
                     case RequiredType.MR:
-                        text = $"魔防要求: {MouseItem.Info.RequiredAmount}";
+                        text = $"魔御要求: {MouseItem.Info.RequiredAmount}";
                         if (User.Stats[Stat.MaxMR] < MouseItem.Info.RequiredAmount)
                             colour = Color.Red;
                         break;

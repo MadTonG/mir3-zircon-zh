@@ -1473,7 +1473,7 @@ namespace Client.Scenes.Views
             message.Append($"Item: {displayInfo.ItemName}");
 
             if (SelectedRow.MarketInfo.Item.Info.Effect == ItemEffect.ItemPart)
-                message.Append(" - [Part]");
+                message.Append(" - [碎片]");
 
 
             if (BuyCountBox.Value > 1)
@@ -1597,7 +1597,7 @@ namespace Client.Scenes.Views
             message.Append($"物品: {displayInfo.ItemName}");
 
             if (cell.Item.Info.Effect == ItemEffect.ItemPart)
-                message.Append(" - [Part]");
+                message.Append(" - [碎片]");
 
 
             if (cell.LinkedCount > 1)
@@ -2200,7 +2200,7 @@ namespace Client.Scenes.Views
             string name = displayInfo?.ItemName ?? "Item has been Sold.";
 
             if (MarketInfo.Item != null && MarketInfo.Item.Info.Effect == ItemEffect.ItemPart)
-                name += " - [Part]";
+                name += " - [碎片]";
 
             NameLabel.Text = name;
 

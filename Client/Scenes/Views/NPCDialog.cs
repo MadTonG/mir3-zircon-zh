@@ -884,11 +884,11 @@ namespace Client.Scenes.Views
                     RequirementLabel.Text = string.Empty;
                     break;
                 case ItemType.Meat:
-                    RequirementLabel.Text = $"Quality: {Good.Item.Durability/1000}";
+                    RequirementLabel.Text = $"品质: {Good.Item.Durability/1000}";
                     RequirementLabel.ForeColour = Color.Wheat;
                     break;
                 case ItemType.Ore:
-                    RequirementLabel.Text = $"Purity: {Good.Item.Durability/1000}";
+                    RequirementLabel.Text = $"纯度: {Good.Item.Durability/1000}";
                     RequirementLabel.ForeColour = Color.Wheat;
                     break;
                 case ItemType.Consumable:
@@ -907,12 +907,12 @@ namespace Client.Scenes.Views
 
                     if (GameScene.Game.CanUseItem(ItemCell.Item))
                     {
-                        RequirementLabel.Text = "Can use Item";
+                        RequirementLabel.Text = "可以使用";
                         RequirementLabel.ForeColour = Color.Aquamarine;
                     }
                     else
                     {
-                        RequirementLabel.Text = "Cannot use Item";
+                        RequirementLabel.Text = "不能使用";
                         RequirementLabel.ForeColour = Color.Red;
                     }
                     break;
@@ -1882,7 +1882,7 @@ namespace Client.Scenes.Views
             LightningCheckBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "Lightning" },
+                Label = { Text = "雷" },
                 ReadOnly = true,
             };
             LightningCheckBox.MouseClick += (o, e) => RefineType = RefineType.Lightning;
@@ -1890,7 +1890,7 @@ namespace Client.Scenes.Views
             WindCheckBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "Wind" },
+                Label = { Text = "风" },
                 ReadOnly = true,
             };
             WindCheckBox.MouseClick += (o, e) => RefineType = RefineType.Wind;
@@ -1898,7 +1898,7 @@ namespace Client.Scenes.Views
             HolyCheckBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "Holy" },
+                Label = { Text = "神圣" },
                 ReadOnly = true,
             };
             HolyCheckBox.MouseClick += (o, e) => RefineType = RefineType.Holy;
@@ -1906,7 +1906,7 @@ namespace Client.Scenes.Views
             DarkCheckBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "Dark" },
+                Label = { Text = "暗黑" },
                 ReadOnly = true,
             };
             DarkCheckBox.MouseClick += (o, e) => RefineType = RefineType.Dark;
@@ -1915,7 +1915,7 @@ namespace Client.Scenes.Views
             PhantomCheckBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "Phantom" },
+                Label = { Text = "幻影" },
                 ReadOnly = true,
             };
             PhantomCheckBox.MouseClick += (o, e) => RefineType = RefineType.Phantom;
@@ -5186,7 +5186,7 @@ namespace Client.Scenes.Views
             FireCheckBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "Fire" },
+                Label = { Text = "火" },
                 ReadOnly = true,
             };
             FireCheckBox.MouseClick += (o, e) => RefineType = RefineType.Fire;
@@ -5194,7 +5194,7 @@ namespace Client.Scenes.Views
             IceCheckBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "Ice" },
+                Label = { Text = "冰" },
                 ReadOnly = true,
             };
             IceCheckBox.MouseClick += (o, e) => RefineType = RefineType.Ice;
@@ -5202,7 +5202,7 @@ namespace Client.Scenes.Views
             LightningCheckBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "Lightning" },
+                Label = { Text = "雷" },
                 ReadOnly = true,
             };
             LightningCheckBox.MouseClick += (o, e) => RefineType = RefineType.Lightning;
@@ -5210,7 +5210,7 @@ namespace Client.Scenes.Views
             WindCheckBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "Wind" },
+                Label = { Text = "风" },
                 ReadOnly = true,
             };
             WindCheckBox.MouseClick += (o, e) => RefineType = RefineType.Wind;
@@ -5218,7 +5218,7 @@ namespace Client.Scenes.Views
             HolyCheckBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "Holy" },
+                Label = { Text = "神圣" },
                 ReadOnly = true,
             };
             HolyCheckBox.MouseClick += (o, e) => RefineType = RefineType.Holy;
@@ -5226,7 +5226,7 @@ namespace Client.Scenes.Views
             DarkCheckBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "Dark" },
+                Label = { Text = "暗黑" },
                 ReadOnly = true,
             };
             DarkCheckBox.MouseClick += (o, e) => RefineType = RefineType.Dark;
@@ -5235,7 +5235,7 @@ namespace Client.Scenes.Views
             PhantomCheckBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "Phantom" },
+                Label = { Text = "幻影" },
                 ReadOnly = true,
             };
             PhantomCheckBox.MouseClick += (o, e) => RefineType = RefineType.Phantom;
@@ -7177,7 +7177,7 @@ namespace Client.Scenes.Views
             FireCheckBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "Fire" },
+                Label = { Text = "火" },
                 ReadOnly = true,
             };
             FireCheckBox.MouseClick += (o, e) => RefineType = RefineType.Fire;
@@ -7185,7 +7185,7 @@ namespace Client.Scenes.Views
             IceCheckBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "Ice" },
+                Label = { Text = "冰" },
                 ReadOnly = true,
             };
             IceCheckBox.MouseClick += (o, e) => RefineType = RefineType.Ice;
@@ -7193,7 +7193,7 @@ namespace Client.Scenes.Views
             LightningCheckBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "Lightning" },
+                Label = { Text = "雷" },
                 ReadOnly = true,
             };
             LightningCheckBox.MouseClick += (o, e) => RefineType = RefineType.Lightning;
@@ -7201,7 +7201,7 @@ namespace Client.Scenes.Views
             WindCheckBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "Wind" },
+                Label = { Text = "风" },
                 ReadOnly = true,
             };
             WindCheckBox.MouseClick += (o, e) => RefineType = RefineType.Wind;
@@ -7209,7 +7209,7 @@ namespace Client.Scenes.Views
             HolyCheckBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "Holy" },
+                Label = { Text = "神圣" },
                 ReadOnly = true,
             };
             HolyCheckBox.MouseClick += (o, e) => RefineType = RefineType.Holy;
@@ -7217,7 +7217,7 @@ namespace Client.Scenes.Views
             DarkCheckBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "Dark" },
+                Label = { Text = "暗黑" },
                 ReadOnly = true,
             };
             DarkCheckBox.MouseClick += (o, e) => RefineType = RefineType.Dark;
@@ -7225,7 +7225,7 @@ namespace Client.Scenes.Views
             PhantomCheckBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "Phantom" },
+                Label = { Text = "幻影" },
                 ReadOnly = true,
             };
             PhantomCheckBox.MouseClick += (o, e) => RefineType = RefineType.Phantom;
@@ -7233,7 +7233,7 @@ namespace Client.Scenes.Views
             HealthCheckBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "Health" },
+                Label = { Text = "生命值" },
                 ReadOnly = true,
             };
             HealthCheckBox.MouseClick += (o, e) => RefineType = RefineType.Health;
@@ -7241,7 +7241,7 @@ namespace Client.Scenes.Views
             ManaCheckBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "Mana" },
+                Label = { Text = "魔法值" },
                 ReadOnly = true,
             };
             ManaCheckBox.MouseClick += (o, e) => RefineType = RefineType.Mana;
@@ -7249,7 +7249,7 @@ namespace Client.Scenes.Views
             ACCheckBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "AC" },
+                Label = { Text = "防御" },
                 ReadOnly = true,
             };
             ACCheckBox.MouseClick += (o, e) => RefineType = RefineType.AC;
@@ -7257,7 +7257,7 @@ namespace Client.Scenes.Views
             MRCheckBox = new DXCheckBox
             {
                 Parent = this,
-                Label = { Text = "MR" },
+                Label = { Text = "魔御" },
                 ReadOnly = true,
             };
             MRCheckBox.MouseClick += (o, e) => RefineType = RefineType.MR;

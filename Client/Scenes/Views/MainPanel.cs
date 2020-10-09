@@ -271,7 +271,7 @@ namespace Client.Scenes.Views
             {
                 Parent = this,
                 Font = new Font(Config.FontName, CEnvir.FontSize(9F), FontStyle.Bold),
-                Text = "AC",
+                Text = "防御",
             };
             label.Location = new Point(385 - label.Size.Width, 20);
 
@@ -279,7 +279,7 @@ namespace Client.Scenes.Views
             {
                 Parent = this,
                 Font = new Font(Config.FontName, CEnvir.FontSize(9F), FontStyle.Bold),
-                Text = "MR",
+                Text = "魔御",
             };
             label.Location = new Point(470 - label.Size.Width, 20);
 
