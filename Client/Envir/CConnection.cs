@@ -58,7 +58,7 @@ namespace Client.Envir
                 }
                 else
                 {
-                    DXMessageBox.Show("已断开服务器\n原因：连接超时.", "断开", DialogAction.ReturnToLogin);
+                    DXMessageBox.Show("服务器连接已断开\n原因：连接超时.", "失去连接", DialogAction.ReturnToLogin);
                 }
             }
 
@@ -82,7 +82,7 @@ namespace Client.Envir
                 {
                     CEnvir.WrongVersion = true;
                     
-                    DXMessageBox.Show("已断开服务器\nReason: Wrong Version.", "Disconnected", DialogAction.Close).Modal = false;
+                    DXMessageBox.Show("服务器连接已断开: 版本错误.", "失去连接", DialogAction.Close).Modal = false;
                 }
 
                 scene.Disconnected();
@@ -93,25 +93,25 @@ namespace Client.Envir
             switch (p.Reason)
             {
                 case DisconnectReason.Unknown:
-                    DXMessageBox.Show("已断开服务器\n原因: 位置", "断开", DialogAction.ReturnToLogin);
+                    DXMessageBox.Show("服务器连接已断开: 未知原因", "失去连接", DialogAction.ReturnToLogin);
                     break;
                 case DisconnectReason.TimedOut:
-                    DXMessageBox.Show("已断开服务器\n原因: 连接超时.", "断开", DialogAction.ReturnToLogin);
+                    DXMessageBox.Show("服务器连接已断开: 连接超时.", "失去连接", DialogAction.ReturnToLogin);
                     break;
                 case DisconnectReason.ServerClosing:
-                    DXMessageBox.Show("已断开服务器\n原因: 服务器关闭.", "断开", DialogAction.ReturnToLogin);
+                    DXMessageBox.Show("服务器连接已断开: 服务器关闭.", "失去连接", DialogAction.ReturnToLogin);
                     break;
                 case DisconnectReason.AnotherUser:
-                    DXMessageBox.Show("已断开服务器\n原因: 账号在另一个地方登录.", "断开", DialogAction.ReturnToLogin);
+                    DXMessageBox.Show("服务器连接已断开: 账号已登录.", "失去连接", DialogAction.ReturnToLogin);
                     break;
                 case DisconnectReason.AnotherUserAdmin:
-                    DXMessageBox.Show("已断开服务器\n原因: 管理员正在登录你的账号.", "断开", DialogAction.ReturnToLogin);
+                    DXMessageBox.Show("服务器连接已断开: 游戏管理员已登录该账号.", "失去连接", DialogAction.ReturnToLogin);
                     break;
                 case DisconnectReason.Banned:
-                    DXMessageBox.Show("已断开服务器\n原因: 账号被禁用.", "断开", DialogAction.ReturnToLogin);
+                    DXMessageBox.Show("服务器连接已断开: 账号已禁用.", "失去连接", DialogAction.ReturnToLogin);
                     break;
                 case DisconnectReason.Crashed:
-                    DXMessageBox.Show("已断开服务器\n原因: 服务器崩溃.", "断开", DialogAction.ReturnToLogin);
+                    DXMessageBox.Show("服务器连接已断开: 服务器错误.", "失去连接", DialogAction.ReturnToLogin);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
