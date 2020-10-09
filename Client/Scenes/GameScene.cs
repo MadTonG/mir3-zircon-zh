@@ -1456,7 +1456,8 @@ namespace Client.Scenes
                     ForeColour = Color.Yellow,
                     Location = new Point(4, ItemLabel.DisplayArea.Bottom),
                     Parent = ItemLabel,
-                    Text = $"{displayInfo.ItemType}",
+                    //Text = $"{displayInfo.ItemType}",
+                    Text = $"{typeof(ItemType).GetMember(displayInfo.ItemType.ToString())[0].GetCustomAttribute<DescriptionAttribute>()?.Description ?? displayInfo.ItemType.ToString()}",
                 };
 
 
@@ -1512,7 +1513,7 @@ namespace Client.Scenes
                     ForeColour = Color.Yellow,
                     Location = new Point(ItemLabel.DisplayArea.Right, 4),
                     Parent = ItemLabel,
-                    Text = $"Amount: {MouseItem.Count}"
+                    Text = $"数量: {MouseItem.Count}"
                 };
                 ItemLabel.Size = new Size(label.DisplayArea.Right + 4, ItemLabel.Size.Height + 4);
                 return;
@@ -1526,7 +1527,7 @@ namespace Client.Scenes
                     ForeColour = Color.LightSeaGreen,
                     Location = new Point(ItemLabel.DisplayArea.Right, 4),
                     Parent = ItemLabel,
-                    Text = $"Parts: {MouseItem.Count}/{displayInfo.PartCount}.",
+                    Text = $"碎片: {MouseItem.Count}/{displayInfo.PartCount}.",
                 };
 
                 ItemLabel.Size = new Size(label.DisplayArea.Right + 4, ItemLabel.Size.Height);
@@ -1599,8 +1600,8 @@ namespace Client.Scenes
                     break;
             }
 
-
-            if (displayInfo.RequiredGender != RequiredGender.None)
+            //不显示盔甲男女性别需求
+/*            if (displayInfo.RequiredGender != RequiredGender.None)
             {
                 Color colour = Color.White;
                 switch (User.Gender)
@@ -1625,7 +1626,7 @@ namespace Client.Scenes
 
                 ItemLabel.Size = new Size(label.DisplayArea.Right + 4 > ItemLabel.Size.Width ? label.DisplayArea.Right + 4 : ItemLabel.Size.Width,
                     label.DisplayArea.Bottom > ItemLabel.Size.Height ? label.DisplayArea.Bottom : ItemLabel.Size.Height);
-            }
+            }*/
 
 
             if (displayInfo.RequiredClass != RequiredClass.All)
@@ -1662,7 +1663,7 @@ namespace Client.Scenes
                     ForeColour = colour,
                     Location = new Point(4, ItemLabel.DisplayArea.Bottom),
                     Parent = ItemLabel,
-                    Text = $"使用职业: {description?.Description ?? displayInfo.RequiredClass.ToString()}",
+                    Text = $"职业: {description?.Description ?? displayInfo.RequiredClass.ToString()}",
                 };
 
                 ItemLabel.Size = new Size(label.DisplayArea.Right + 4 > ItemLabel.Size.Width ? label.DisplayArea.Right + 4 : ItemLabel.Size.Width,
@@ -1678,7 +1679,7 @@ namespace Client.Scenes
                 switch (displayInfo.RequiredType)
                 {
                     case RequiredType.Level:
-                        text = $"等级要求: {MouseItem.Info.RequiredAmount}";
+                        text = $"需要等级: {MouseItem.Info.RequiredAmount}";
                         if (User.Level < MouseItem.Info.RequiredAmount && User.Stats[Stat.Rebirth] == 0)
                             colour = Color.Red;
                         break;
@@ -1693,22 +1694,22 @@ namespace Client.Scenes
                             colour = Color.Red;
                         break;
                     case RequiredType.MR:
-                        text = $"魔御要求: {MouseItem.Info.RequiredAmount}";
+                        text = $"需要魔御: {MouseItem.Info.RequiredAmount}";
                         if (User.Stats[Stat.MaxMR] < MouseItem.Info.RequiredAmount)
                             colour = Color.Red;
                         break;
                     case RequiredType.DC:
-                        text = $"破坏要求: {MouseItem.Info.RequiredAmount}";
+                        text = $"需要破坏: {MouseItem.Info.RequiredAmount}";
                         if (User.Stats[Stat.MaxDC] < MouseItem.Info.RequiredAmount)
                             colour = Color.Red;
                         break;
                     case RequiredType.MC:
-                        text = $"魔法要求: {MouseItem.Info.RequiredAmount}";
+                        text = $"需要魔法力: {MouseItem.Info.RequiredAmount}";
                         if (User.Stats[Stat.MaxMC] < MouseItem.Info.RequiredAmount)
                             colour = Color.Red;
                         break;
                     case RequiredType.SC:
-                        text = $"道术要求: {MouseItem.Info.RequiredAmount}";
+                        text = $"需要道术力: {MouseItem.Info.RequiredAmount}";
                         if (User.Stats[Stat.MaxSC] < MouseItem.Info.RequiredAmount)
                             colour = Color.Red;
                         break;
@@ -1924,7 +1925,7 @@ namespace Client.Scenes
                         break;
                     default:
                         label.ForeColour = Color.Yellow;
-                        label.Text = "无法精炼或升级.";
+                        label.Text = "无法炼制或升级.";
                         break;
                 }
 
@@ -2275,12 +2276,12 @@ namespace Client.Scenes
 
                         if ((MouseItem.Flags & UserItemFlags.Refinable) == UserItemFlags.Refinable)
                         {
-                            label.Text = "Ready for Refine";
+                            label.Text = "炼制准备就绪";
                             label.ForeColour = Color.LightGreen;
                         }
                         else
                         {
-                            label.Text = $"{displayInfo.ItemType} Training Points: {MouseItem.Experience / Globals.WeaponExperienceList[MouseItem.Level]:0.##%}";
+                            label.Text = $"{displayInfo.ItemType} 修炼点数: {MouseItem.Experience / Globals.WeaponExperienceList[MouseItem.Level]:0.##%}";
                             label.ForeColour = Color.White;
                         }
 
@@ -2318,12 +2319,12 @@ namespace Client.Scenes
 
                         if ((MouseItem.Flags & UserItemFlags.Refinable) == UserItemFlags.Refinable)
                         {
-                            label.Text = "Ready for Refine";
+                            label.Text = "炼制准备就绪";
                             label.ForeColour = Color.LightGreen;
                         }
                         else
                         {
-                            label.Text = $"{displayInfo.ItemType} Training Points: {MouseItem.Experience / Globals.AccessoryExperienceList[MouseItem.Level]:0.##%}";
+                            label.Text = $"{displayInfo.ItemType} 修炼点数: {MouseItem.Experience / Globals.AccessoryExperienceList[MouseItem.Level]:0.##%}";
                             label.ForeColour = Color.White;
                         }
 
@@ -2387,7 +2388,7 @@ namespace Client.Scenes
                     ForeColour = Color.White,
                     Location = new Point(4, ItemLabel.DisplayArea.Bottom),
                     Parent = ItemLabel,
-                    Text = $"冷却: {MouseItem.Info.Durability/1000M:#,##0.#} Seconds"
+                    Text = $"冷却: {MouseItem.Info.Durability/1000M:#,##0.#} 秒"
                 };
 
                 ItemLabel.Size = new Size(label.DisplayArea.Right + 4 > ItemLabel.Size.Width ? label.DisplayArea.Right + 4 : ItemLabel.Size.Width,
@@ -3533,7 +3534,7 @@ namespace Client.Scenes
         {
             if (User == null) return;
 
-            Type type = typeof(AttackMode);
+            Type type = typeof(MirClass);
             MemberInfo[] infos = type.GetMember(User.Class.ToString());
             DescriptionAttribute description = infos[0].GetCustomAttribute<DescriptionAttribute>();
             MainPanel.ClassLabel.Text = description?.Description ?? User.Class.ToString();

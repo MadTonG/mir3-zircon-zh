@@ -631,7 +631,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "E. Att:"
+                Text = "攻击元素:"
             };
             label.Location = new Point(50 - label.Size.Width, 175);
 
@@ -776,7 +776,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "E. Adv:"
+                Text = "强元素:"
             };
             label.Location = new Point( 50  - label.Size.Width, 235);
 
@@ -941,7 +941,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = StatsTab,
-                Text = "E. Dis:"
+                Text = "弱元素:"
             };
             label.Location = new Point(50 - label.Size.Width, 295);
 
@@ -1212,7 +1212,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = HermitTab,
-                Text = "E. Att:"
+                Text = "攻击元素:"
             };
             label.Location = new Point(50 - label.Size.Width, 90);
 
@@ -1355,7 +1355,7 @@ namespace Client.Scenes.Views
             label = new DXLabel
             {
                 Parent = HermitTab,
-                Text = "未使用修炼点数:"
+                Text = "可用修炼点数:"
             };
             label.Location = new Point(HermitTab.Size.Width / 4  * 2- label.Size.Width + 25, 150);
 
@@ -1389,7 +1389,7 @@ namespace Client.Scenes.Views
 
                 if (check.Checked)
                 {
-                    DXMessageBox box = new DXMessageBox("Are you sure you want to increase your 防御?", "修炼确认", DXMessageBoxButtons.YesNo);
+                    DXMessageBox box = new DXMessageBox("你确定要增加你的 防御?", "修炼确认", DXMessageBoxButtons.YesNo);
 
                     box.YesButton.MouseClick += (o1, e1) =>
                     {
@@ -1416,7 +1416,7 @@ namespace Client.Scenes.Views
 
                 if (check.Checked)
                 {
-                    DXMessageBox box = new DXMessageBox("Are you sure you want to increase your 魔御?", "修炼确认", DXMessageBoxButtons.YesNo);
+                    DXMessageBox box = new DXMessageBox("你确定要增加你的 魔御?", "修炼确认", DXMessageBoxButtons.YesNo);
 
                     box.YesButton.MouseClick += (o1, e1) =>
                     {
@@ -1443,7 +1443,7 @@ namespace Client.Scenes.Views
 
                 if (check.Checked)
                 {
-                    DXMessageBox box = new DXMessageBox("Are you sure you want to increase your 生命值?", "修炼确认", DXMessageBoxButtons.YesNo);
+                    DXMessageBox box = new DXMessageBox("你确定要增加你的 生命值?", "修炼确认", DXMessageBoxButtons.YesNo);
 
                     box.YesButton.MouseClick += (o1, e1) =>
                     {
@@ -1470,7 +1470,7 @@ namespace Client.Scenes.Views
 
                 if (check.Checked)
                 {
-                    DXMessageBox box = new DXMessageBox("Are you sure you want to increase your 魔法值?", "Hermit Confirmation", DXMessageBoxButtons.YesNo);
+                    DXMessageBox box = new DXMessageBox("你确定要增加你的 魔法值?", "Hermit Confirmation", DXMessageBoxButtons.YesNo);
 
                     box.YesButton.MouseClick += (o1, e1) =>
                     {
@@ -1498,7 +1498,7 @@ namespace Client.Scenes.Views
 
                 if (check.Checked)
                 {
-                    DXMessageBox box = new DXMessageBox("Are you sure you want to increase your 破坏?", "Hermit Confirmation", DXMessageBoxButtons.YesNo);
+                    DXMessageBox box = new DXMessageBox("你确定要增加你的 破坏?", "Hermit Confirmation", DXMessageBoxButtons.YesNo);
 
                     box.YesButton.MouseClick += (o1, e1) =>
                     {
@@ -1525,7 +1525,7 @@ namespace Client.Scenes.Views
 
                 if (check.Checked)
                 {
-                    DXMessageBox box = new DXMessageBox("Are you sure you want to increase your 魔法?", "Hermit Confirmation", DXMessageBoxButtons.YesNo);
+                    DXMessageBox box = new DXMessageBox("你确定要增加你的 魔法?", "Hermit Confirmation", DXMessageBoxButtons.YesNo);
 
                     box.YesButton.MouseClick += (o1, e1) =>
                     {
@@ -1552,7 +1552,7 @@ namespace Client.Scenes.Views
 
                 if (check.Checked)
                 {
-                    DXMessageBox box = new DXMessageBox("Are you sure you want to increase your 道术?", "Hermit Confirmation", DXMessageBoxButtons.YesNo);
+                    DXMessageBox box = new DXMessageBox("你确定要增加你的 道术?", "Hermit Confirmation", DXMessageBoxButtons.YesNo);
 
                     box.YesButton.MouseClick += (o1, e1) =>
                     {
@@ -1580,7 +1580,7 @@ namespace Client.Scenes.Views
 
                 if (check.Checked)
                 {
-                    DXMessageBox box = new DXMessageBox("Are you sure you want to increase your 元素攻击?", "Hermit Confirmation", DXMessageBoxButtons.YesNo);
+                    DXMessageBox box = new DXMessageBox("你确定要增加你的 元素攻击?", "Hermit Confirmation", DXMessageBoxButtons.YesNo);
 
                     box.YesButton.MouseClick += (o1, e1) =>
                     {

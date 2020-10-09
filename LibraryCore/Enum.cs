@@ -96,8 +96,11 @@ namespace Library
     [Flags]
     public enum RequiredGender : byte
     {
+        [Description("男")]
         Male = 1,
+        [Description("女")]
         Female = 2,
+        [Description("男 | 女")]
         None = Male | Female
     }
 
@@ -303,42 +306,63 @@ namespace Library
 
     public enum ItemType : byte
     {
+        [Description("杂物")]
         Nothing,
+        [Description("消耗品")]
         Consumable,
+        [Description("武器")]
         Weapon,
+        [Description("护甲")]
         Armour,
+        [Description("照明")]
         Torch,
+        [Description("头盔")]
         Helmet,
+        [Description("项链")]
         Necklace,
+        [Description("手镯")]
         Bracelet,
+        [Description("戒指")]
         Ring,
+        [Description("鞋子")]
         Shoes,
+        [Description("毒药")]
         Poison,
+        [Description("护身符")]
         Amulet,
+        [Description("肉")]
         Meat,
+        [Description("矿石")]
         Ore,
+        [Description("书籍")]
         Book,
+        [Description("卷轴")]
         Scroll,
         [Description("Dark Stone")]
         DarkStone,
         [Description("Refine Special")]
         RefineSpecial,
-        [Description("Horse Armour")]
+        [Description("马铠")]
         HorseArmour,
+        [Description("鲜花")]
         Flower,
-        [Description("Companion Food")]
+        [Description("宠物食物")]
         CompanionFood,
-        [Description("Companion Bag")]
+        [Description("宠物背包")]
         CompanionBag,
-        [Description("Companion Head")]
+        [Description("宠物头饰")]
         CompanionHead,
-        [Description("Companion Back")]
+        [Description("宠物背饰")]
         CompanionBack,
+        [Description("系统")]
         System,
-        [Description("Item Part")]
+        [Description("物品碎片")]
         ItemPart,
+        [Description("勋章")]
         Emblem,
+        [Description("盾牌")]
         Shield,
+        [Description("翅膀")]
         Wings
     }
 

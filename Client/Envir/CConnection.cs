@@ -285,7 +285,7 @@ namespace Client.Envir
             {
                 case RequestPasswordResetResult.Disabled:
                     login.RequestPassswordBox.Clear();
-                    DXMessageBox.Show("Password Reset is currently disabled.", "重置密码");
+                    DXMessageBox.Show("重置密码服务已关闭。", "重置密码");
                     break;
                 case RequestPasswordResetResult.BadEMail:
                     login.RequestPassswordBox.EMailTextBox.SetFocus();
@@ -300,9 +300,9 @@ namespace Client.Envir
                     break;
                 case RequestPasswordResetResult.ResetDelay:
                     expiry = CEnvir.Now.Add(p.Duration);
-                    box = DXMessageBox.Show($"You cannot request another password reset so soon.\n" +
+                    box = DXMessageBox.Show($"请勿频繁重置密码。\n" +
                                             $"Next available Reset: {expiry}\n" +
-                                            $"等待: {Math.Floor(p.Duration.TotalHours):#,##0} Hours, {p.Duration.Minutes} Minutes, {p.Duration.Seconds} Seconds", "重置密码");
+                                            $"等待: {Math.Floor(p.Duration.TotalHours):#,##0} 小时, {p.Duration.Minutes} 分, {p.Duration.Seconds} 秒", "重置密码");
 
                     box.ProcessAction = () =>
                     {
@@ -316,16 +316,16 @@ namespace Client.Envir
 
                         TimeSpan remaining = expiry - CEnvir.Now;
 
-                        box.Label.Text = $"You cannot request another password reset so soon.\n" +
+                        box.Label.Text = $"请勿频繁重置密码。\n" +
                                          $"Next Possible Reset: {expiry}\n" +
-                                         $"等待: {Math.Floor(remaining.TotalHours):#,##0} Hours, {remaining.Minutes} Minutes, {remaining.Seconds} Seconds";
+                                         $"等待: {Math.Floor(remaining.TotalHours):#,##0} 小时, {remaining.Minutes} 分, {remaining.Seconds} 秒";
                     };
                     break;
                 case RequestPasswordResetResult.Banned:
                     expiry = CEnvir.Now.Add(p.Duration);
-                    box = DXMessageBox.Show($"账号已被禁用.\n\nReason: {p.Message}\n" +
+                    box = DXMessageBox.Show($"账号已被禁用.\nReason: {p.Message}\n" +
                                             $"解锁日期: {expiry}\n" +
-                                            $"等待: {Math.Floor(p.Duration.TotalHours):#,##0} Hours, {p.Duration.Minutes} Minutes, {p.Duration.Seconds} Seconds", "重置密码");
+                                            $"等待: {Math.Floor(p.Duration.TotalHours):#,##0} 小时, {p.Duration.Minutes} 分, {p.Duration.Seconds} 秒", "重置密码");
 
                     box.ProcessAction = () =>
                     {
@@ -342,13 +342,13 @@ namespace Client.Envir
                         box.Label.Text = $"账号已被禁用.\n\n" +
                                          $"原因: {p.Message}\n" +
                                          $"解锁日期: {expiry}\n" +
-                                         $"等待: {Math.Floor(remaining.TotalHours):#,##0} Hours, {remaining.Minutes} Minutes, {remaining.Seconds} Seconds";
+                                         $"等待: {Math.Floor(remaining.TotalHours):#,##0} 小时, {remaining.Minutes} 分, {remaining.Seconds} 秒";
                     };
                     break;
                 case RequestPasswordResetResult.Success:
                     login.RequestPassswordBox.Clear();
-                    DXMessageBox.Show("Password reset request success\n" +
-                                      "Please check your E-Mail for further instructions.", "重置密码");
+                    DXMessageBox.Show("申请密码重置成功\n" +
+                                      "请检查你的邮箱获取详细信息。", "重置密码");
                     break;
             }
 
@@ -392,15 +392,15 @@ namespace Client.Envir
             {
                 case ActivationResult.Disabled:
                     login.ActivationBox.Clear();
-                    DXMessageBox.Show("Manual Activation is currently disabled.", "Activation");
+                    DXMessageBox.Show("手动验证激活服务已关闭.", "账号激活");
                     break;
                 case ActivationResult.AccountNotFound:
                     login.ActivationBox.ActivationKeyTextBox.SetFocus();
-                    DXMessageBox.Show("Account could not be found.", "Activation");
+                    DXMessageBox.Show("账号不存在。", "账号激活");
                     break;
                 case ActivationResult.Success:
                     login.ActivationBox.Clear();
-                    DXMessageBox.Show("Your account has been activated successfully\n", "Activation");
+                    DXMessageBox.Show("您的帐号已成功激活\n", "账号激活");
                     break;
             }
 
@@ -418,25 +418,25 @@ namespace Client.Envir
             {
                 case RequestActivationKeyResult.Disabled:
                     login.RequestActivationBox.Clear();
-                    DXMessageBox.Show("Password Reset is currently disabled.", "Request Activation Key");
+                    DXMessageBox.Show("Password Reset is currently disabled.", "密钥验证");
                     break;
                 case RequestActivationKeyResult.BadEMail:
                     login.RequestActivationBox.EMailTextBox.SetFocus();
-                    DXMessageBox.Show("E-Mail is not acceptable.", "Request Activation Key");
+                    DXMessageBox.Show("E-Mail is not acceptable.", "密钥验证");
                     break;
                 case RequestActivationKeyResult.AccountNotFound:
                     login.RequestActivationBox.EMailTextBox.SetFocus();
-                    DXMessageBox.Show("Account does not exist.", "Request Activation Key");
+                    DXMessageBox.Show("Account does not exist.", "密钥验证");
                     break;
                 case RequestActivationKeyResult.AlreadyActivated:
                     login.RequestActivationBox.Clear();
-                    DXMessageBox.Show("Account is already activated.", "Request Activation Key");
+                    DXMessageBox.Show("Account is already activated.", "密钥验证");
                     break;
                 case RequestActivationKeyResult.RequestDelay:
                     expiry = CEnvir.Now.Add(p.Duration);
                     box = DXMessageBox.Show($"Cannot request another activation e-mail so soon.\n" +
                                             $"Next available request: {expiry}\n" +
-                                            $"等待: {Math.Floor(p.Duration.TotalHours):#,##0} Hours, {p.Duration.Minutes} Minutes, {p.Duration.Seconds} Seconds", "Request Activation Key");
+                                            $"等待: {Math.Floor(p.Duration.TotalHours):#,##0} 小时, {p.Duration.Minutes} 分, {p.Duration.Seconds} 秒", "密钥验证");
 
                     box.ProcessAction = () =>
                     {
@@ -452,13 +452,13 @@ namespace Client.Envir
 
                         box.Label.Text = $"Cannot request another activation e-mail so soon.\n" +
                                          $"Next Possible request: {expiry}\n" +
-                                         $"等待: {Math.Floor(remaining.TotalHours):#,##0} Hours, {remaining.Minutes} Minutes, {remaining.Seconds} Seconds";
+                                         $"等待: {Math.Floor(remaining.TotalHours):#,##0} 小时, {remaining.Minutes} 分, {remaining.Seconds} 秒";
                     };
                     break;
                 case RequestActivationKeyResult.Success:
                     login.RequestActivationBox.Clear();
                     DXMessageBox.Show("Activation e-mail request was successful\n" +
-                                      "Please check your E-Mail for further instructions.", "Request Activation Key");
+                                      "Please check your E-Mail for further instructions.", "密钥验证");
                     break;
             }
 
@@ -501,7 +501,7 @@ namespace Client.Envir
                     DXMessageBox box = DXMessageBox.Show($"账号已被禁用.\n\n" +
                                                          $"原因: {p.Message}\n" +
                                                          $"解锁日期: {expiry}\n" +
-                                                         $"等待: {Math.Floor(p.Duration.TotalHours):#,##0} Hours, {p.Duration.Minutes} Minutes, {p.Duration.Seconds} Seconds", "登录");
+                                                         $"等待: {Math.Floor(p.Duration.TotalHours):#,##0} 小时, {p.Duration.Minutes} 分, {p.Duration.Seconds} 秒", "登录");
 
                     box.ProcessAction = () =>
                     {
@@ -518,7 +518,7 @@ namespace Client.Envir
                         box.Label.Text = $"账号已被禁用.\n\n" +
                                          $"原因: {p.Message}\n" +
                                          $"解锁日期: {expiry}\n" +
-                                         $"等待: {Math.Floor(remaining.TotalHours):#,##0} Hours, {remaining.Minutes} Minutes, {remaining.Seconds} Seconds";
+                                         $"等待: {Math.Floor(remaining.TotalHours):#,##0} 小时, {remaining.Minutes} 分, {remaining.Seconds} Se秒conds";
                     };
                     break;
                 case LoginResult.AlreadyLoggedIn:
@@ -1598,7 +1598,7 @@ namespace Client.Envir
                     weapon.Level++;
                     weapon.Flags |= UserItemFlags.Refinable;
 
-                    message += ", 您的武器已准备精炼";
+                    message += ", 你的武器可以炼制";
                 }
                 else
                     message += $", 武器经验值 {p.Amount/10:#,##0.#}";
@@ -2515,7 +2515,7 @@ namespace Client.Envir
                 fromCell.Item = null;
                 fromCell.RefreshItem();
 
-                GameScene.Game.ReceiveChat($"Your Refine has been placed successfully, please collect your weapon in {Functions.ToString(Globals.RefineTimes[p.RefineQuality], false)}", MessageType.System);
+                GameScene.Game.ReceiveChat($"你的武器炼制成功，请收取你的武器 {Functions.ToString(Globals.RefineTimes[p.RefineQuality], false)}", MessageType.System);
             }
         }
         public void Process(S.NPCMasterRefine p)
