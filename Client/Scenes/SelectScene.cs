@@ -814,11 +814,8 @@ namespace Client.Scenes
                 //SelectedClassLabel.Text = SelectedClass.ToString();
                 //通过职业枚举描述信息显示职业中文名称
                 Type type = typeof(MirClass);
-
                 MemberInfo[] infos = type.GetMember(SelectedClass.ToString());
-
                 DescriptionAttribute description = infos[0].GetCustomAttribute<DescriptionAttribute>();
-
                 SelectedClassLabel.Text = description?.Description ?? SelectedClass.ToString();
             }
 
@@ -871,7 +868,13 @@ namespace Client.Scenes
                         break;
 
                 }
-                SelectedGenderLabel.Text = SelectedGender.ToString();
+
+                //SelectedGenderLabel.Text = SelectedGender.ToString();
+                //通过枚举性别描述信息显示性别中文名称
+                Type type = typeof(MirGender);
+                MemberInfo[] infos = type.GetMember(SelectedGender.ToString());
+                DescriptionAttribute description = infos[0].GetCustomAttribute<DescriptionAttribute>();
+                SelectedGenderLabel.Text = description?.Description ?? SelectedGender.ToString();
             }
 
             #endregion
